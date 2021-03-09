@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>subcategory1 on My space</title>
-    <link>http://example.org/categories/subcategory1/</link>
+    <link>ssadakk.github.io/categories/subcategory1/</link>
     <description>Recent content in subcategory1 on My space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 09 Mar 2021 13:28:40 +0900</lastBuildDate><atom:link href="http://example.org/categories/subcategory1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Mar 2021 13:28:40 +0900</lastBuildDate><atom:link href="ssadakk.github.io/categories/subcategory1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test!!!jfo2ei9jfioesdjo</title>
-      <link>http://example.org/2021/03/testjfo2ei9jfioesdjo/</link>
+      <link>ssadakk.github.io/2021/03/testjfo2ei9jfioesdjo/</link>
       <pubDate>Tue, 09 Mar 2021 13:28:40 +0900</pubDate>
       
-      <guid>http://example.org/2021/03/testjfo2ei9jfioesdjo/</guid>
+      <guid>ssadakk.github.io/2021/03/testjfo2ei9jfioesdjo/</guid>
       <description></description>
     </item>
     

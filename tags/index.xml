@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My space</title>
-    <link>http://example.org/tags/</link>
+    <link>ssadakk.github.io/tags/</link>
     <description>Recent content in Tags on My space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 09 Mar 2021 13:28:40 +0900</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Mar 2021 13:28:40 +0900</lastBuildDate><atom:link href="ssadakk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>tag12</title>
-      <link>http://example.org/tags/tag12/</link>
+      <link>ssadakk.github.io/tags/tag12/</link>
       <pubDate>Tue, 09 Mar 2021 13:28:40 +0900</pubDate>
       
-      <guid>http://example.org/tags/tag12/</guid>
+      <guid>ssadakk.github.io/tags/tag12/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tag22</title>
-      <link>http://example.org/tags/tag22/</link>
+      <link>ssadakk.github.io/tags/tag22/</link>
       <pubDate>Tue, 09 Mar 2021 13:28:40 +0900</pubDate>
       
-      <guid>http://example.org/tags/tag22/</guid>
+      <guid>ssadakk.github.io/tags/tag22/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tag1</title>
-      <link>http://example.org/tags/tag1/</link>
+      <link>ssadakk.github.io/tags/tag1/</link>
       <pubDate>Tue, 09 Mar 2021 12:57:38 +0900</pubDate>
       
-      <guid>http://example.org/tags/tag1/</guid>
+      <guid>ssadakk.github.io/tags/tag1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tag2</title>
-      <link>http://example.org/tags/tag2/</link>
+      <link>ssadakk.github.io/tags/tag2/</link>
       <pubDate>Tue, 09 Mar 2021 12:57:38 +0900</pubDate>
       
-      <guid>http://example.org/tags/tag2/</guid>
+      <guid>ssadakk.github.io/tags/tag2/</guid>
       <description></description>
     </item>
     
