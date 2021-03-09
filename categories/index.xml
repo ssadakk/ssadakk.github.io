@@ -1,45 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on My space</title>
-    <link>ssadakk.github.io/categories/</link>
-    <description>Recent content in Categories on My space</description>
+    <title>Categories on YOUR_TITLE</title>
+    <link>https://YOUR_NAME.github.io/categories/</link>
+    <description>Recent content in Categories on YOUR_TITLE</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-kr</language>
-    <lastBuildDate>Tue, 09 Mar 2021 13:28:40 +0900</lastBuildDate><atom:link href="ssadakk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-US</language>
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://YOUR_NAME.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>category1</title>
-      <link>ssadakk.github.io/categories/category1/</link>
-      <pubDate>Tue, 09 Mar 2021 13:28:40 +0900</pubDate>
+      <title>test</title>
+      <link>https://YOUR_NAME.github.io/categories/test/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>ssadakk.github.io/categories/category1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>subcategory1</title>
-      <link>ssadakk.github.io/categories/subcategory1/</link>
-      <pubDate>Tue, 09 Mar 2021 13:28:40 +0900</pubDate>
-      
-      <guid>ssadakk.github.io/categories/subcategory1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>category</title>
-      <link>ssadakk.github.io/categories/category/</link>
-      <pubDate>Tue, 09 Mar 2021 12:57:38 +0900</pubDate>
-      
-      <guid>ssadakk.github.io/categories/category/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>subcategory</title>
-      <link>ssadakk.github.io/categories/subcategory/</link>
-      <pubDate>Tue, 09 Mar 2021 12:57:38 +0900</pubDate>
-      
-      <guid>ssadakk.github.io/categories/subcategory/</guid>
+      <guid>https://YOUR_NAME.github.io/categories/test/</guid>
       <description></description>
     </item>
     

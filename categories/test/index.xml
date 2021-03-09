@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>YOUR_TITLE</title>
-    <link>https://YOUR_NAME.github.io/</link>
-    <description>Recent content on YOUR_TITLE</description>
+    <title>test on YOUR_TITLE</title>
+    <link>https://YOUR_NAME.github.io/categories/test/</link>
+    <description>Recent content in test on YOUR_TITLE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://YOUR_NAME.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://YOUR_NAME.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>테스트용 2 Markdown Syntax</title>
       <link>https://YOUR_NAME.github.io/post/markdown-syntax/</link>
