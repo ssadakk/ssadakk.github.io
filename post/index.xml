@@ -5,8 +5,17 @@
     <link>http://example.org/post/</link>
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 09 Mar 2021 12:57:38 +0900</lastBuildDate><atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 09 Mar 2021 13:28:40 +0900</lastBuildDate><atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test!!!jfo2ei9jfioesdjo</title>
+      <link>http://example.org/post/test_content1/</link>
+      <pubDate>Tue, 09 Mar 2021 13:28:40 +0900</pubDate>
+      
+      <guid>http://example.org/post/test_content1/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Test</title>
       <link>http://example.org/post/test/</link>

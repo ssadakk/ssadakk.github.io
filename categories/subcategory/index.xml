@@ -5,7 +5,7 @@
     <link>http://example.org/categories/subcategory/</link>
     <description>Recent content in subcategory on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>ko-kr</language>
     <lastBuildDate>Tue, 09 Mar 2021 12:57:38 +0900</lastBuildDate><atom:link href="http://example.org/categories/subcategory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>

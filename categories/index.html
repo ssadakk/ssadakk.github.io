@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="ko-kr">
   <head>
     
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="My New Hugo Site">
 <meta property="og:description" content="">
 <meta name="twitter:description" content="">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en-us">
 
 
 <meta name="twitter:card" content="summary">
@@ -102,12 +102,12 @@
         <div id="categories-archives" class="main-content-wrap">
           <form id="filter-form" action="##">
             <input name="category" type="text" class="form-control input--xlarge"
-                   placeholder="" autofocus="autofocus">
+                   placeholder="Search category" autofocus="autofocus">
           </form>
           <h5 class="archive-result text-color-base text-xlarge"
-              data-message-zero=""
-              data-message-one=""
-              data-message-other=""></h5>
+              data-message-zero="no category found"
+              data-message-one="1 cartegory found"
+              data-message-other="{n} categories found"></h5>
           <section class="boxes">
             
               
@@ -116,7 +116,15 @@
                 </div>
               
                 <div>
+                  <a href="#posts-list-category1" class="category-anchor" data-category="category1">category1</a>
+                </div>
+              
+                <div>
                   <a href="#posts-list-subcategory" class="category-anchor" data-category="subcategory">subcategory</a>
+                </div>
+              
+                <div>
+                  <a href="#posts-list-subcategory1" class="category-anchor" data-category="subcategory1">subcategory1</a>
                 </div>
               
             
@@ -135,7 +143,25 @@
                         Test
                       </a>
                       <span class="archive-post-date"> - 
-   9, 2021
+  March 9, 2021
+</span>
+                    </li>
+                  
+                </ul>
+              </div>
+              
+              <div id="posts-list-category1" class="archive box" data-category="category1" style="display: block;">
+                <h4 class="archive-title text-xlarge">
+                  <a class="link-unstyled" href="category1">category1 (1)</a>
+                </h4>
+                <ul class="archive-posts">
+                  
+                    <li class="archive-post">
+                      <a class="archive-post-title" href="http://example.org/post/test_content1/">
+                        Test!!!jfo2ei9jfioesdjo
+                      </a>
+                      <span class="archive-post-date"> - 
+  March 9, 2021
 </span>
                     </li>
                   
@@ -153,7 +179,25 @@
                         Test
                       </a>
                       <span class="archive-post-date"> - 
-   9, 2021
+  March 9, 2021
+</span>
+                    </li>
+                  
+                </ul>
+              </div>
+              
+              <div id="posts-list-subcategory1" class="archive box" data-category="subcategory1" style="display: block;">
+                <h4 class="archive-title text-xlarge">
+                  <a class="link-unstyled" href="subcategory1">subcategory1 (1)</a>
+                </h4>
+                <ul class="archive-posts">
+                  
+                    <li class="archive-post">
+                      <a class="archive-post-title" href="http://example.org/post/test_content1/">
+                        Test!!!jfo2ei9jfioesdjo
+                      </a>
+                      <span class="archive-post-date"> - 
+  March 9, 2021
 </span>
                     </li>
                   
@@ -165,7 +209,7 @@
         </div>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2021 My New Hugo Site. 
+    &copy; 2021 My New Hugo Site. All Rights Reserved
   </span>
 </footer>
 
