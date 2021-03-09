@@ -13,10 +13,10 @@
 
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="category">
-<meta name="twitter:title" content="category">
-<meta property="og:url" content="http://example.org/categories/category/">
-<meta property="twitter:url" content="http://example.org/categories/category/">
+<meta property="og:title" content="Archives">
+<meta name="twitter:title" content="Archives">
+<meta property="og:url" content="http://example.org/archives/">
+<meta property="twitter:url" content="http://example.org/archives/">
 <meta property="og:site_name" content="My space">
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta name="twitter:description" content="Hugo tranquilpeak theme demo">
@@ -39,16 +39,16 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/19570976aac83be99d9ee44c3058f503?s=640">
 
 
-    <title>category</title>
+    <title>Archives</title>
 
     <link rel="icon" href="/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="/categories/category/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="/archives/index.xml">
     
 
     
 
-    <link rel="canonical" href="http://example.org/categories/category/">
+    <link rel="canonical" href="http://example.org/archives/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -174,88 +174,38 @@
   </div>
 </nav>
 
-      
-        
-
-      
       <div id="main" data-behavior="1"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <div id="archives" class="main-content-wrap">
+          <form id="filter-form" action="#">
+            <input name="date" type="text" class="form-control input--xlarge" placeholder="Search date (YYYY/MM/DD)" autofocus="autofocus">
+          </form>
+          <h5 class="archive-result text-color-base text-xlarge" data-message-zero="no post found" data-message-one="1 post found" data-message-other="{n} posts found"></h5>
+<section class="boxes">
   
     
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="http://example.org/2021/03/test/">
-          Test
-        </a>
-      </h1>
+    <div class="archive archive-year box" data-date="2021">
+      <h4 class="archive-title" style="text-decoration: none;">2021</h4>
       
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2021-03-09T12:57:38&#43;09:00">
-        
-  March 9, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="/categories/category">category</a>, 
-    
-      <a class="category-link" href="/categories/subcategory">subcategory</a>
-    
-  
-
-  </div>
-
+        <ul class="archive-posts archive-month" data-date="202103">
+          <h5 class="archive-title" style="text-decoration: none;">March</h5>
+          
+            <li class="archive-post archive-day" data-date="20210309">
+              <a class="archive-post-title" href="http://example.org/2021/03/testjfo2ei9jfioesdjo/">Test!!!jfo2ei9jfioesdjo</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20210309">
+              <a class="archive-post-title" href="http://example.org/2021/03/test/">Test</a>
+            </li>
+          
+        </ul>
+      
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        
-      
-      <p>
-        <a href="http://example.org/2021/03/test/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
   
-    <a href="http://example.org/2021/03/test/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="//example.com/image.jpg"/>
-      </div>
-    </a>
-  
-</article>
-
-            
-            
-
-          </section>
-        
-        <footer id="footer" class="main-content-wrap">
-  <span class="copyrights">
-    &copy; 2021 ssadakk. All Rights Reserved
-  </span>
-</footer>
-
+</section>
+        </div>
       </div>
     </div>
     

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Posts on My space</title>
     <link>http://example.org/post/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Posts on My space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Tue, 09 Mar 2021 13:28:40 +0900</lastBuildDate><atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test!!!jfo2ei9jfioesdjo</title>
-      <link>http://example.org/post/test_content1/</link>
+      <link>http://example.org/2021/03/testjfo2ei9jfioesdjo/</link>
       <pubDate>Tue, 09 Mar 2021 13:28:40 +0900</pubDate>
       
-      <guid>http://example.org/post/test_content1/</guid>
+      <guid>http://example.org/2021/03/testjfo2ei9jfioesdjo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>http://example.org/post/test/</link>
+      <link>http://example.org/2021/03/test/</link>
       <pubDate>Tue, 09 Mar 2021 12:57:38 +0900</pubDate>
       
-      <guid>http://example.org/post/test/</guid>
+      <guid>http://example.org/2021/03/test/</guid>
       <description></description>
     </item>
     
