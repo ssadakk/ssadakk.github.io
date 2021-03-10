@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="삽질한 기록들을 모아보자 'Hugo, github 이용해 블로그 생성'" />
+  <title>Hugo, github 이용해 블로그 생성  | My dev space</title>
+  <meta property="og:title" content="Hugo, github 이용해 블로그 생성" />
+  
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2021-03-10"> 
+  <meta property="og:url" content="https://ssadakk.github.io/post/blog/create-blog-with-hugo/" />
+  <meta property="og:site_name" content="My dev space" />
+   <meta property="og:image" content="https://ssadakk.github.io/images/thumbnail.png">  
+  <meta property="og:tags" content="hugo" />
+  
+  <meta property="og:tags" content="github" />
+  
+  <meta property="og:tags" content="blog" />
+  
+
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" /> <link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.css" /> <link rel="stylesheet" href="/vendor/wow/animate.css" /> <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="header-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg">
+          
+          <a class="navbar-brand" href='/'>
+            <img src="/images/logo.png" alt="Logo" />
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href='/'>Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='/categories'>Categories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='/tags'>Tags</a>
+              </li>
+            </ul>
+            
+            <div id="search-wrapper">
+              <form action="https://google.com/search">
+                <input type="search" placeholder='Keyword' name="q" class="search">
+                <i class="fa fa-search"></i>
+                <input type="hidden" name="sitesearch" value="https://ssadakk.github.io/" />
+              </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="top-area">
+  <div class="top-video top-video-small ">
+    <video preload="preload" class="video" autoplay="autoplay" loop="loop" muted>
+      <source src="/video/bg.webp" type="video/webp" />
+      <source src="/video/bg.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <div class="title-message">
+        
+        <a href="https://ssadakk.github.io/post/blog/create-blog-with-hugo/">
+          <h1>
+            Hugo, github 이용해 블로그 생성
+          </h1>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+
+<div class="post-title">
+  <a href="https://ssadakk.github.io/post/blog/create-blog-with-hugo/">
+    <div class="post-meta">
+      <time></time>
+    </div>
+  </a>
+</div>
+<section class="post-content">
+  
+  <p>Hugo 를 이용해 github.io 블로그 생성하는 방법</p>
+<h2 id="hugo-github-블로그-생성">Hugo, Github 블로그 생성</h2>
+<p>Category: etc</p>
+<p>윈도우  설치 과정 기술, Mac 의 경우에는 나중에 추가</p>
+<h2 id="1-git-설치">1. Git 설치</h2>
+<pre><code>- git download link : [https://git-scm.com/](https://git-scm.com/)
+- 설치 후 git —version 통해 설치되었는지 확인
+
+    ![image](1.png)
+</code></pre>
+<h2 id="2-hugo-설치">2. Hugo 설치</h2>
+<ul>
+<li>
+<p>Hugo download link : <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p>
+</li>
+<li>
+<p>Hugo 다운로드 후에  c:\hugo\bin 에 풀기 ( 다른데 풀어도 됨. 환경 변수 등록만 잘 해주면 된다)</p>
+</li>
+<li>
+<p>Window키 + Q  → 시스템 환경 변수 편집 선택 → 환경변수 → 아래 화면처럼 등록</p>
+<p><img src="2.png" alt="2.png"></p>
+</li>
+</ul>
+<h2 id="3-hugo-project-만들기">3. Hugo project 만들기</h2>
+<ul>
+<li>프로젝트 폴더를 정함. (나의 경우 C:\src\study\github)</li>
+<li>$hugo new site 프로젝트 이름 (나의 경우 myblog)</li>
+<li>생성하면 프로젝트 폴더가 생기고 안에 파일들이 생김</li>
+</ul>
+<h2 id="4-테마-다운-및-복사">4. 테마 다운 및 복사</h2>
+<ul>
+<li>
+<p><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a> 등 Hugo theme 이 리스팅 되어있는 다양한 사이트 있음. 그런곳에서 맘에 든 테마를 선택</p>
+</li>
+<li>
+<p>git clone [theme의 git 주소] → [] 은 입력하지 말것</p>
+</li>
+<li>
+<p>메인 프로젝트의 theme 폴더에 다운받은 테마를 복사, 아래처럼 theme 폴더 아래 테마 폴더 생기도록</p>
+<p><img src="3.png" alt="3.png"></p>
+</li>
+<li>
+<p>테마를 이제 적용해야됨, 메인 폴더의 config.toml 파일을 열어서 아래처럼 theme = &ldquo;테마 이름&quot;을 적용. 나의 경우엔 mainroad 를 적용</p>
+<p><img src="4.png" alt="4.png"></p>
+</li>
+</ul>
+<h2 id="5-글쓰기">5. 글쓰기</h2>
+<ul>
+<li>
+<p>hugo new filename.md 로 글을 생성할수 있음.</p>
+<p><img src="5.png" alt="5.png"></p>
+</li>
+<li>
+<p>hugo server -D (draft 파일도 포함해 보여주겠다는 뜻)</p>
+</li>
+<li>
+<p><a href="https://localhost:1313">https://localhost:1313</a> 으로 접속하면 로컬 webserver 이용해 확인할 수 있음</p>
+</li>
+</ul>
+<h2 id="6--배포">6.  배포</h2>
+<ul>
+<li>
+<p>배포하려면, 2개의 Github repo 필요함.</p>
+</li>
+<li>
+<p>전체 파일이 들어갈 것은 마음대로 생성, 실제 보일 페이지가 저장되는 곳은 레포 이름을 다음과 같이 설정. &ldquo;본인아이디&rdquo;.github.io 아래처럼.</p>
+<p><img src="6.png" alt="6.png"></p>
+</li>
+</ul>
+<p>그다음 아래순서로 진행</p>
+<ul>
+<li>전체프로젝트 폴더로 가서</li>
+<li>git init</li>
+<li>git remote add origin [전체 프로젝트 repo url]</li>
+<li>git submodule add -b master [xxx.github.io repo url]</li>
+</ul>
+<p>그다음 빌드</p>
+<ul>
+<li>hugo -t [테마이름]</li>
+<li>빌드하면 public 폴더에 빌드 결과가 저장, 결과를 git repo 에 푸쉬하면 됨.</li>
+</ul>
+<p>repo push</p>
+<ul>
+<li>cd public</li>
+<li>git add *</li>
+<li>git commit -m &ldquo;commit message&rdquo;</li>
+<li>git push origin master</li>
+<li>cd ..</li>
+<li>git add *</li>
+<li>git commit -m &ldquo;commit message&rdquo;</li>
+<li>git push origin master</li>
+<li>이렇게 하면 차례대로 public 폴더 파일을 push 하고 프로젝트 전체를 push 하게됨</li>
+</ul>
+<p>이렇게 하면 <a href="http://githubid.github.io">githubid.github.io</a> 에 조금 지나서 들어가보면 내가만든 페이지가 보일것!</p>
+</section>
+<time>
+  <i class="far fa-clock"></i>
+  Wednesday, Mar 10, 2021 10:53
+</time>
+ 
+<i class="far fa-folder"></i>
+<a href="https://ssadakk.github.io//categories/etc">etc</a>
+ 
+<div class="post-comment">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "My dev space" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+<hr class="summary-sep" />
+<div class="recommend-articles">
+  <h3>
+    Recommend these articles
+  </h3>
+  <ul>
+     
+  </ul>
+</div>
+ 
+        </div>
+
+        <div id="sidebar" class="col-12 col-md-8 col-lg-4">
+          <div class="post-sidebar-area">
+<div id="post-toc" class="sidebar-widget-area">
+  <div class="title">
+    <i class="fa fa-list"></i>
+    TOC
+  </div>
+  <div class="widget-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo-github-블로그-생성">Hugo, Github 블로그 생성</a></li>
+    <li><a href="#1-git-설치">1. Git 설치</a></li>
+    <li><a href="#2-hugo-설치">2. Hugo 설치</a></li>
+    <li><a href="#3-hugo-project-만들기">3. Hugo project 만들기</a></li>
+    <li><a href="#4-테마-다운-및-복사">4. 테마 다운 및 복사</a></li>
+    <li><a href="#5-글쓰기">5. 글쓰기</a></li>
+    <li><a href="#6--배포">6.  배포</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+<div class="sidebar-widget-area">
+  <div class="title">
+    <i class="fa fa-tag"></i>
+    Tags
+  </div>
+  <div class="widget-content">
+     
+    <a href="https://ssadakk.github.io/tags/hugo" class="badge badge-secondary">hugo</a>
+    <a href="https://ssadakk.github.io/tags/github" class="badge badge-secondary">github</a>
+    <a href="https://ssadakk.github.io/tags/blog" class="badge badge-secondary">blog</a>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<footer class="footer-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="footer-single-widget">
+          <div class="copywrite-text mt-30">
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/vendor/jquery-2.2.4.min.js"></script>
+<script src="/vendor/bootstrap/popper.min.js"></script>
+<script src="/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="/vendor/native-console.js"></script>
+<script src="/vendor/jquery.easing.1.3.js"></script>
+<script src="/vendor/jquery.scrollUp.min.js"></script>
+
+
+<script src="/js/active.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "UA-XXXXXXXXX-X");
+</script>
+ 
+</body>
+</html>

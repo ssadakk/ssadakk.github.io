@@ -2,46 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://YOUR_NAME.github.io/categories/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <loc>https://ssadakk.github.io/tags/blog/</loc>
+    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url><url>
-    <loc>https://YOUR_NAME.github.io/tags/css/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <loc>https://ssadakk.github.io/categories/</loc>
+    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url><url>
-    <loc>https://YOUR_NAME.github.io/tags/html/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <loc>https://ssadakk.github.io/categories/etc/</loc>
+    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url><url>
-    <loc>https://YOUR_NAME.github.io/tags/markdown/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <loc>https://ssadakk.github.io/tags/github/</loc>
+    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url><url>
-    <loc>https://YOUR_NAME.github.io/post/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <loc>https://ssadakk.github.io/tags/hugo/</loc>
+    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url><url>
-    <loc>https://YOUR_NAME.github.io/tags/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <loc>https://ssadakk.github.io/post/blog/create-blog-with-hugo/</loc>
+    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url><url>
-    <loc>https://YOUR_NAME.github.io/categories/test/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <loc>https://ssadakk.github.io/</loc>
+    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url><url>
-    <loc>https://YOUR_NAME.github.io/tags/themes/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <loc>https://ssadakk.github.io/post/</loc>
+    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url><url>
-    <loc>https://YOUR_NAME.github.io/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://YOUR_NAME.github.io/post/markdown-syntax/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://YOUR_NAME.github.io/tags/text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://YOUR_NAME.github.io/post/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://YOUR_NAME.github.io/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://YOUR_NAME.github.io/post/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <loc>https://ssadakk.github.io/tags/</loc>
+    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url>
 </urlset>

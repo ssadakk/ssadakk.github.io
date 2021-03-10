@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My dev space</title>
-    <link>https://ssadakk.github.io/</link>
-    <description>Recent content on My dev space</description>
+    <title>blog on My dev space</title>
+    <link>https://ssadakk.github.io/tags/blog/</link>
+    <description>Recent content in blog on My dev space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 10 Mar 2021 10:53:46 +0900</lastBuildDate><atom:link href="https://ssadakk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Mar 2021 10:53:46 +0900</lastBuildDate><atom:link href="https://ssadakk.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo, github 이용해 블로그 생성</title>
       <link>https://ssadakk.github.io/post/blog/create-blog-with-hugo/</link>
