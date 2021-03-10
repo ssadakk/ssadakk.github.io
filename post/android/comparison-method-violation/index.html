@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="삽질한 기록들을 모아보자 'Comparison Method Violation'" />
+  <title>Comparison Method Violation  | My dev space</title>
+  <meta property="og:title" content="Comparison Method Violation" />
+  
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2021-03-10"> 
+  <meta property="og:url" content="https://ssadakk.github.io/post/android/comparison-method-violation/" />
+  <meta property="og:site_name" content="My dev space" />
+   <meta property="og:image" content="https://ssadakk.github.io/images/thumbnail.png">  
+  <meta property="og:tags" content="android" />
+  
+  <meta property="og:tags" content="java" />
+  
+  <meta property="og:tags" content="exeception" />
+  
+
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" /> <link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.css" /> <link rel="stylesheet" href="/vendor/wow/animate.css" /> <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="header-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg">
+          
+          <a class="navbar-brand" href='/'>
+            <img src="/images/logo.png" alt="Logo" />
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href='/'>Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='/categories'>Categories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='/tags'>Tags</a>
+              </li>
+            </ul>
+            
+            <div id="search-wrapper">
+              <form action="https://google.com/search">
+                <input type="search" placeholder='Keyword' name="q" class="search">
+                <i class="fa fa-search"></i>
+                <input type="hidden" name="sitesearch" value="https://ssadakk.github.io/" />
+              </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="top-area">
+  <div class="top-video top-video-small ">
+    <video preload="preload" class="video" autoplay="autoplay" loop="loop" muted>
+      <source src="/video/bg.webp" type="video/webp" />
+      <source src="/video/bg.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <div class="title-message">
+        
+        <a href="https://ssadakk.github.io/post/android/comparison-method-violation/">
+          <h1>
+            Comparison Method Violation
+          </h1>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+
+<div class="post-title">
+  <a href="https://ssadakk.github.io/post/android/comparison-method-violation/">
+    <div class="post-meta">
+      <time></time>
+    </div>
+  </a>
+</div>
+<section class="post-content">
+  
+  <p>Android 사용 중 object 값 비교를 위해 Comparator.compare 를 override 하는 중 발생하는 Timsort 에서 Comparation method vioration 에 대한 정리</p>
+<h2 id="참고-동영상">참고 동영상</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Enwbh6wpnYs">https://www.youtube.com/watch?v=Enwbh6wpnYs</a></li>
+<li><a href="https://www.youtube.com/watch?v=bvnmbRo7a1Y">https://www.youtube.com/watch?v=bvnmbRo7a1Y</a></li>
+</ul>
+<p>위 영상을 보면 여러가지 문제되는 케이스들이 제기되기는 하지만, 나의 경우 명확히 찾아내지 못해 발생했던 문제 케이스 몇가지를 listup 함.</p>
+<h2 id="comparison-method-violates-its-genral-contract">Comparison method violates it&rsquo;s genral contract!</h2>
+<blockquote>
+<p>The implementor must ensure that sgn(compare(x, y)) == -sgn(compare(y, x)) for all x and y. (This implies that compare(x, y) must throw an exception if and only if compare(y, x) throws an exception.)
+The implementor must also ensure that the relation is transitive: ((compare(x, y)&gt;0) &amp;&amp; (compare(y, z)&gt;0)) implies compare(x, z)&gt;0.
+Finally, the implementor must ensure that compare(x, y)==0 implies that sgn(compare(x, z))==sgn(compare(y, z)) for all z.
+결국 <br>
+A &gt; B and B &gt; C then for any A, B and C: A &gt; C<br>
+가 성립해야 된다는 말.</p>
+</blockquote>
+<h2 id="발생하는-문제">발생하는 문제</h2>
+<p>일반적으로 적당한 값들의 비교에서는 별다른 문제가 생지기 않지만 특정 경우 문제가 발생하는 경우가 있다.
+실제로 나의 경우 아래와 같은 코드에서 문제가 생겼다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span><span style="color:#f92672">(</span>Object o1<span style="color:#f92672">,</span> Object o2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)</span> <span style="color:#f92672">(</span>o1<span style="color:#f92672">.</span><span style="color:#a6e22e">getLongValue</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> o2<span style="color:#f92672">.</span><span style="color:#a6e22e">getLongValue</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="1-integermin_value-문제">1. Integer.MIN_VALUE 문제</h3>
+<ul>
+<li>(int) (o1.getLongValue() - o2.getLongValue()) 로 비교문 쓰는 곳이 많은데, 둘 다 long value 인 상태.<br>
+이 때, compare() 의 return value 가 Integer.MIN_VALUE() 인 경우가 문제 될수 있음.<br>
+o1, o2 parameter 순서를 바꿔도 Integer.MIN_VALUE() 가 나오는 경우가 발생할 수 있다.<br>
+이렇게 되는 경우 sgn(compare(x,y)) == -sgn(compare(y,x)) 규칙에 위반되므로 Exception 발생</li>
+</ul>
+<h3 id="2-integer-overflow">2. Integer overflow</h3>
+<p>나의 경우 위의 compare() 를 시간을 비교하기 위한 경우로 사용했다.<br>
+이런 경우에 생길 수 있는 문제.<br>
+Integer.MAX_VALUE 값은 환산하면 24일.  즉 24일 이상 차이나는 아이템이 문제가 될 수 있음.<br>
+예) 각 아이템에 저장된 날짜가 1월 1일, 15일, 30일 인 경우, <br>
+compare(1일, 15일) ⇒ 14일<br>
+compare(15일, 30일) ⇒ 15일, <br>
+compare(1일, 30일) ⇒ 29일, Overflow 발생, 마이너스 값 리턴 발생.<br>
+정리하면 <br>
+compare(1일, 15일)  &gt; 0<br>
+compare(15일, 30일) &gt; 0<br>
+compare(1일, 30일) &gt; 0 이어야 하지만 마이너스 값 리턴되기 때문에  &lt; 0<br>
+Long.compare() 를 사용하거나 Comparator.comparing(RecExtProgram::getStartTimeUtcMillis) 를 사용해 회피함</p>
+<h3 id="3-string-compare">3. String compare</h3>
+<p>이건 String compare 중 발생한 문제인데, Object Null , compareTo() 메소드를 바로 사용하는 경우 문제 발생하더라.
+한 4000개 정도 되는 String 비교중 특정 상황에서만 발생하는데, 나는 compareTo() 메소드가 1, 0, -1 만 리턴하는줄 알고 있었는데 그게 아니었다. 또 Null 과의 compare 문제도 발생하고. 그래서 아래처럼 Null check 와 함께 return value 를 1, 0, -1로 만들어주니 문제가 해결됨</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">programList<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">((</span>p1<span style="color:#f92672">,</span> p2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>p1<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> p2<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        res <span style="color:#f92672">=</span> p1<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">().</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>p2<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">());</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">compare</span><span style="color:#f92672">(</span>res<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span>
+<span style="color:#f92672">});</span>
+</code></pre></div>
+</section>
+<time>
+  <i class="far fa-clock"></i>
+  Wednesday, Mar 10, 2021 14:55
+</time>
+ 
+<i class="far fa-folder"></i>
+<a href="https://ssadakk.github.io//categories/android">android</a>
+ 
+<div class="post-comment">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "myblog-yamhhn4gzh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+<hr class="summary-sep" />
+<div class="recommend-articles">
+  <h3>
+    Recommend these articles
+  </h3>
+  <ul>
+    
+    <li>
+      <a href="https://ssadakk.github.io/post/blog/create-blog-with-hugo/" rel="prev">
+        <span>Hugo, github 이용해 블로그 생성</span>
+      </a>
+    </li>
+     
+  </ul>
+</div>
+ 
+        </div>
+
+        <div id="sidebar" class="col-12 col-md-8 col-lg-4">
+          <div class="post-sidebar-area">
+<div id="post-toc" class="sidebar-widget-area">
+  <div class="title">
+    <i class="fa fa-list"></i>
+    TOC
+  </div>
+  <div class="widget-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#참고-동영상">참고 동영상</a></li>
+    <li><a href="#comparison-method-violates-its-genral-contract">Comparison method violates it&rsquo;s genral contract!</a></li>
+    <li><a href="#발생하는-문제">발생하는 문제</a>
+      <ul>
+        <li><a href="#1-integermin_value-문제">1. Integer.MIN_VALUE 문제</a></li>
+        <li><a href="#2-integer-overflow">2. Integer overflow</a></li>
+        <li><a href="#3-string-compare">3. String compare</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+<div class="sidebar-widget-area">
+  <div class="title">
+    <i class="fa fa-tag"></i>
+    Tags
+  </div>
+  <div class="widget-content">
+     
+    <a href="https://ssadakk.github.io/tags/android" class="badge badge-secondary">android</a>
+    <a href="https://ssadakk.github.io/tags/java" class="badge badge-secondary">java</a>
+    <a href="https://ssadakk.github.io/tags/exeception" class="badge badge-secondary">exeception</a>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<footer class="footer-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="footer-single-widget">
+          <div class="copywrite-text mt-30">
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/vendor/jquery-2.2.4.min.js"></script>
+<script src="/vendor/bootstrap/popper.min.js"></script>
+<script src="/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="/vendor/native-console.js"></script>
+<script src="/vendor/jquery.easing.1.3.js"></script>
+<script src="/vendor/jquery.scrollUp.min.js"></script>
+
+
+<script src="/js/active.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1LKR3P67X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-P1LKR3P67X");
+</script>
+ 
+</body>
+</html>

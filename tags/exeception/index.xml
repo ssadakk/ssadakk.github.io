@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My dev space</title>
-    <link>https://ssadakk.github.io/</link>
-    <description>Recent content on My dev space</description>
+    <title>exeception on My dev space</title>
+    <link>https://ssadakk.github.io/tags/exeception/</link>
+    <description>Recent content in exeception on My dev space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 10 Mar 2021 14:55:19 +0900</lastBuildDate><atom:link href="https://ssadakk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Mar 2021 14:55:19 +0900</lastBuildDate><atom:link href="https://ssadakk.github.io/tags/exeception/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Comparison Method Violation</title>
       <link>https://ssadakk.github.io/post/android/comparison-method-violation/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://ssadakk.github.io/post/android/comparison-method-violation/</guid>
       <description>&lt;p&gt;Android 사용 중 object 값 비교를 위해 Comparator.compare 를 override 하는 중 발생하는 Timsort 에서 Comparation method vioration 에 대한 정리&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hugo, github 이용해 블로그 생성</title>
-      <link>https://ssadakk.github.io/post/blog/create-blog-with-hugo/</link>
-      <pubDate>Wed, 10 Mar 2021 10:53:46 +0900</pubDate>
-      
-      <guid>https://ssadakk.github.io/post/blog/create-blog-with-hugo/</guid>
-      <description>&lt;p&gt;Hugo 를 이용해 github.io 블로그 생성하는 방법&lt;/p&gt;</description>
     </item>
     
   </channel>

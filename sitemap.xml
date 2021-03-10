@@ -2,10 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ssadakk.github.io/tags/blog/</loc>
-    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
+    <loc>https://ssadakk.github.io/tags/android/</loc>
+    <lastmod>2021-03-10T14:55:19+09:00</lastmod>
+  </url><url>
+    <loc>https://ssadakk.github.io/categories/android/</loc>
+    <lastmod>2021-03-10T14:55:19+09:00</lastmod>
   </url><url>
     <loc>https://ssadakk.github.io/categories/</loc>
+    <lastmod>2021-03-10T14:55:19+09:00</lastmod>
+  </url><url>
+    <loc>https://ssadakk.github.io/post/android/comparison-method-violation/</loc>
+    <lastmod>2021-03-10T14:55:19+09:00</lastmod>
+  </url><url>
+    <loc>https://ssadakk.github.io/tags/exeception/</loc>
+    <lastmod>2021-03-10T14:55:19+09:00</lastmod>
+  </url><url>
+    <loc>https://ssadakk.github.io/tags/java/</loc>
+    <lastmod>2021-03-10T14:55:19+09:00</lastmod>
+  </url><url>
+    <loc>https://ssadakk.github.io/</loc>
+    <lastmod>2021-03-10T14:55:19+09:00</lastmod>
+  </url><url>
+    <loc>https://ssadakk.github.io/post/</loc>
+    <lastmod>2021-03-10T14:55:19+09:00</lastmod>
+  </url><url>
+    <loc>https://ssadakk.github.io/tags/</loc>
+    <lastmod>2021-03-10T14:55:19+09:00</lastmod>
+  </url><url>
+    <loc>https://ssadakk.github.io/tags/blog/</loc>
     <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url><url>
     <loc>https://ssadakk.github.io/categories/etc/</loc>
@@ -18,15 +42,6 @@
     <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url><url>
     <loc>https://ssadakk.github.io/post/blog/create-blog-with-hugo/</loc>
-    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
-  </url><url>
-    <loc>https://ssadakk.github.io/</loc>
-    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
-  </url><url>
-    <loc>https://ssadakk.github.io/post/</loc>
-    <lastmod>2021-03-10T10:53:46+09:00</lastmod>
-  </url><url>
-    <loc>https://ssadakk.github.io/tags/</loc>
     <lastmod>2021-03-10T10:53:46+09:00</lastmod>
   </url>
 </urlset>
