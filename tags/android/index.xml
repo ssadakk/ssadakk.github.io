@@ -6,7 +6,16 @@
     <description>Recent content in android on My dev space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 10 Mar 2021 14:55:19 +0900</lastBuildDate><atom:link href="https://ssadakk.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Mar 2021 15:43:17 +0900</lastBuildDate><atom:link href="https://ssadakk.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android AAC Overview</title>
+      <link>https://ssadakk.github.io/post/android/android-aac-overview/</link>
+      <pubDate>Thu, 11 Mar 2021 15:43:17 +0900</pubDate>
+      
+      <guid>https://ssadakk.github.io/post/android/android-aac-overview/</guid>
+      <description>&lt;p&gt;AAC 에 대하여 이해하기 위해 간략히 내용을 훑어본다.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Comparison Method Violation</title>
       <link>https://ssadakk.github.io/post/android/comparison-method-violation/</link>

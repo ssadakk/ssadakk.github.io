@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="삽질한 기록들을 모아보자 'Android AAC Overview'" />
+  <title>Android AAC Overview  | My dev space</title>
+  <meta property="og:title" content="Android AAC Overview" />
+  
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2021-03-11"> 
+  <meta property="og:url" content="https://ssadakk.github.io/post/android/android-aac-overview/" />
+  <meta property="og:site_name" content="My dev space" />
+   <meta property="og:image" content="https://ssadakk.github.io/images/thumbnail.png">  
+  <meta property="og:tags" content="android" />
+  
+  <meta property="og:tags" content="AAC" />
+  
+  <meta property="og:tags" content="MVVM" />
+  
+
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" /> <link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.css" /> <link rel="stylesheet" href="/vendor/wow/animate.css" /> <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="header-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg">
+          
+          <a class="navbar-brand" href='/'>
+            <img src="/images/logo.png" alt="Logo" />
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href='/'>Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='/categories'>Categories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='/tags'>Tags</a>
+              </li>
+            </ul>
+            
+            <div id="search-wrapper">
+              <form action="https://google.com/search">
+                <input type="search" placeholder='Keyword' name="q" class="search">
+                <i class="fa fa-search"></i>
+                <input type="hidden" name="sitesearch" value="https://ssadakk.github.io/" />
+              </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="top-area">
+  <div class="top-video top-video-small ">
+    <video preload="preload" class="video" autoplay="autoplay" loop="loop" muted>
+      <source src="/video/bg.webp" type="video/webp" />
+      <source src="/video/bg.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <div class="title-message">
+        
+        <a href="https://ssadakk.github.io/post/android/android-aac-overview/">
+          <h1>
+            Android AAC Overview
+          </h1>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+
+<div class="post-title">
+  <a href="https://ssadakk.github.io/post/android/android-aac-overview/">
+    <div class="post-meta">
+      <time></time>
+    </div>
+  </a>
+</div>
+<section class="post-content">
+  
+  <p>AAC 에 대하여 이해하기 위해 간략히 내용을 훑어본다.</p>
+<h3 id="android-architecture-components">Android Architecture Components</h3>
+<p>테스트와 유지 관리가 쉬운 앱을 디자인하도록 돕는 라이브러리 모음.
+<a href="https://developer.android.com/jetpack/guide">여기</a> 내용을 참고.</p>
+<p>잘 구성되어 Final architecture 는 아래와 같은 구조가 될 것.
+<img src="final-architecture.png" alt="final-architecture.png"></p>
+<p>각 구성요소가 한 수준 아래의 구성 요소에만 종속되는것을 볼 수 있다.
+Repository 는 유일하게 여러개의 다른 클래스에 종속된다.</p>
+<p>위와 같은 설계의 장점 : 사용자에게 보이는 정보가 Activity 의 lifecycle 과 관계 없이 일관되게 표시될 수 있다.
+가령 Activity 가 Data에 종속되어 있는 경우는 예를 들어 화면이 가로모드로 회전된다거나 할때 Activity lifecycle에 따라 표시되는 화면이 다라 질 수 있다.<br>
+또한 앱이 종료되고 한참 뒤에 다시 사용하는지 이런 환경과 관계 없이 로컬에 보존된 데이터가 바로 표시되게 되고 때에 따라서 Reposotiry에서 데이터 업데이트를 하게 된다.</p>
+<p>이제 이 구조를 만들고 앱을 구성하기 위한 여러가지 요소들이 존재한다. LiveData, ViewModel, Room, Paging &hellip;<br>
+하나씩 필요한것들을 확인해 나가 볼 예정.</p>
+</section>
+<time>
+  <i class="far fa-clock"></i>
+  Thursday, Mar 11, 2021 15:43
+</time>
+ 
+<i class="far fa-folder"></i>
+<a href="https://ssadakk.github.io//categories/android">android</a>
+ 
+<div class="post-comment">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "myblog-yamhhn4gzh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+<hr class="summary-sep" />
+<div class="recommend-articles">
+  <h3>
+    Recommend these articles
+  </h3>
+  <ul>
+    
+    <li>
+      <a href="https://ssadakk.github.io/post/android/comparison-method-violation/" rel="prev">
+        <span>Comparison Method Violation</span>
+      </a>
+    </li>
+     
+  </ul>
+</div>
+ 
+        </div>
+
+        <div id="sidebar" class="col-12 col-md-8 col-lg-4">
+          <div class="post-sidebar-area">
+<div id="post-toc" class="sidebar-widget-area">
+  <div class="title">
+    <i class="fa fa-list"></i>
+    TOC
+  </div>
+  <div class="widget-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#android-architecture-components">Android Architecture Components</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+<div class="sidebar-widget-area">
+  <div class="title">
+    <i class="fa fa-tag"></i>
+    Tags
+  </div>
+  <div class="widget-content">
+     
+    <a href="https://ssadakk.github.io/tags/android" class="badge badge-secondary">android</a>
+    <a href="https://ssadakk.github.io/tags/aac" class="badge badge-secondary">AAC</a>
+    <a href="https://ssadakk.github.io/tags/mvvm" class="badge badge-secondary">MVVM</a>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<footer class="footer-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="footer-single-widget">
+          <div class="copywrite-text mt-30">
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/vendor/jquery-2.2.4.min.js"></script>
+<script src="/vendor/bootstrap/popper.min.js"></script>
+<script src="/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="/vendor/native-console.js"></script>
+<script src="/vendor/jquery.easing.1.3.js"></script>
+<script src="/vendor/jquery.scrollUp.min.js"></script>
+
+
+<script src="/js/active.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1LKR3P67X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-P1LKR3P67X");
+</script>
+ 
+</body>
+</html>
