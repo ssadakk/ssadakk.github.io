@@ -1,12 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>github on My dev space</title>
+    <title>github on MyDevSpace</title>
     <link>https://ssadakk.github.io/tags/github/</link>
-    <description>Recent content in github on My dev space</description>
+    <description>Recent content in github on MyDevSpace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Wed, 10 Mar 2021 10:53:46 +0900</lastBuildDate><atom:link href="https://ssadakk.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Mar 2021 10:53:46 +0900</lastBuildDate>
+    
+        <atom:link href="https://ssadakk.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>View Binding</title>
+      <link>https://ssadakk.github.io/post/android/view-binding/</link>
+      <pubDate>Thu, 11 Mar 2021 16:23:00 +0900</pubDate>
+      
+      <guid>https://ssadakk.github.io/post/android/view-binding/</guid>
+      <description>&lt;p&gt;View binding 에 대해 알아볼것&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android AAC Overview</title>
+      <link>https://ssadakk.github.io/post/android/android-aac-overview/</link>
+      <pubDate>Thu, 11 Mar 2021 15:43:17 +0900</pubDate>
+      
+      <guid>https://ssadakk.github.io/post/android/android-aac-overview/</guid>
+      <description>&lt;p&gt;AAC 에 대하여 이해하기 위해 간략히 내용을 훑어본다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Comparison Method Violation</title>
+      <link>https://ssadakk.github.io/post/android/comparison-method-violation/</link>
+      <pubDate>Wed, 10 Mar 2021 14:55:19 +0900</pubDate>
+      
+      <guid>https://ssadakk.github.io/post/android/comparison-method-violation/</guid>
+      <description>&lt;p&gt;Android 사용 중 object 값 비교를 위해 Comparator.compare 를 override 하는 중 발생하는 Timsort 에서 Comparation method vioration 에 대한 정리&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Hugo, github 이용해 블로그 생성</title>
       <link>https://ssadakk.github.io/post/blog/create-blog-with-hugo/</link>

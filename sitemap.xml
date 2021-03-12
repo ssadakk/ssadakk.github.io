@@ -1,59 +1,137 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://ssadakk.github.io/tags/android/</loc>
     <lastmod>2021-03-11T16:23:00+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/categories/android/</loc>
     <lastmod>2021-03-11T16:23:00+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/categories/</loc>
     <lastmod>2021-03-11T16:23:00+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/</loc>
     <lastmod>2021-03-11T16:23:00+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/post/</loc>
     <lastmod>2021-03-11T16:23:00+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/tags/</loc>
     <lastmod>2021-03-11T16:23:00+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/post/android/view-binding/</loc>
     <lastmod>2021-03-11T16:23:00+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/tags/aac/</loc>
     <lastmod>2021-03-11T15:43:17+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/post/android/android-aac-overview/</loc>
     <lastmod>2021-03-11T15:43:17+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/tags/mvvm/</loc>
     <lastmod>2021-03-11T15:43:17+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/post/android/comparison-method-violation/</loc>
     <lastmod>2021-03-10T14:55:19+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/tags/exeception/</loc>
     <lastmod>2021-03-10T14:55:19+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/tags/java/</loc>
     <lastmod>2021-03-10T14:55:19+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/tags/blog/</loc>
     <lastmod>2021-03-10T10:53:46+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/categories/etc/</loc>
     <lastmod>2021-03-10T10:53:46+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/tags/github/</loc>
     <lastmod>2021-03-10T10:53:46+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/tags/hugo/</loc>
     <lastmod>2021-03-10T10:53:46+09:00</lastmod>
-  </url><url>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ssadakk.github.io/post/blog/create-blog-with-hugo/</loc>
     <lastmod>2021-03-10T10:53:46+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
+  
+  <url>
+    <loc>https://ssadakk.github.io/series/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>

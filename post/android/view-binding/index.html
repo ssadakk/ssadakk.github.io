@@ -1,168 +1,424 @@
 <!DOCTYPE html>
-<html lang="en-US"><head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="description" content="삽질한 기록들을 모아보자 'View Binding'" />
-  <title>View Binding  | My dev space</title>
-  <meta property="og:title" content="View Binding" />
-  
-  <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2021-03-11"> 
-  <meta property="og:url" content="https://ssadakk.github.io/post/android/view-binding/" />
-  <meta property="og:site_name" content="My dev space" />
-   <meta property="og:image" content="https://ssadakk.github.io/images/thumbnail.png">  
-  <meta property="og:tags" content="android" />
-  
+<html lang="en">
+  <head>
+    <title>
+        View Binding - MyDevSpace
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="View binding 에 대해 알아볼것
+" />
+    <meta name="generator" content="Hugo 0.81.0 with theme pure" />
+    <title>View Binding - MyDevSpace</title>
+    
+    
+    <link rel="stylesheet" href="https://ssadakk.github.io/css/style.min.b4b742918d33349bb411274c2c6de779fe2fda4d2101d2703f6bc0fc0a19edf2.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="View Binding" />
+<meta property="og:description" content="View binding 에 대해 알아볼것" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ssadakk.github.io/post/android/view-binding/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-11T16:23:00&#43;09:00" />
+<meta property="article:modified_time" content="2021-03-11T16:23:00&#43;09:00" />
+
+<meta itemprop="name" content="View Binding">
+<meta itemprop="description" content="View binding 에 대해 알아볼것"><meta itemprop="datePublished" content="2021-03-11T16:23:00&#43;09:00" />
+<meta itemprop="dateModified" content="2021-03-11T16:23:00&#43;09:00" />
+<meta itemprop="wordCount" content="384">
+<meta itemprop="keywords" content="android," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="View Binding"/>
+<meta name="twitter:description" content="View binding 에 대해 알아볼것"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
 
   
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
   
-  <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" /> <link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.css" /> <link rel="stylesheet" href="/vendor/wow/animate.css" /> <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-<header class="header-area">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <nav class="navbar navbar-expand-lg">
-          
-          <a class="navbar-brand" href='/'>
-            <img src="/images/logo.png" alt="Logo" />
+
+  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/ssadakk" target="_blank">
+            <img class="img-circle img-rotate" src="https://ssadakk.github.io/avatar.png" width="200" height="200">
           </a>
-          
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href='/'>Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href='/categories'>Categories</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href='/tags'>Tags</a>
-              </li>
-            </ul>
-            
-            <div id="search-wrapper">
-              <form action="https://google.com/search">
-                <input type="search" placeholder='Keyword' name="q" class="search">
-                <i class="fa fa-search"></i>
-                <input type="hidden" name="sitesearch" value="https://ssadakk.github.io/" />
-              </form>
-              </div>
+          <h2 id="name" class="hidden-xs hidden-sm">HM J</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Nobody</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Seoul, Korea</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
             </div>
-          </div>
-        </nav>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-github">
+                <a href="https://github.com/ssadakk/">
+                    <i class="icon icon-github"></i>
+                  <span class="menu-title">Github</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div id="tag-cloud-list" class="widget-body">
+            
+            
+            <a href="https://ssadakk.github.io/tags/aac/" class="tag-list-link" rel="1">aac<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://ssadakk.github.io/tags/android/" class="tag-list-link" rel="3">android<span
+               class="tag-list-count">3</span></a>
+            
+            
+            <a href="https://ssadakk.github.io/tags/blog/" class="tag-list-link" rel="1">blog<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://ssadakk.github.io/tags/exeception/" class="tag-list-link" rel="1">exeception<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://ssadakk.github.io/tags/github/" class="tag-list-link" rel="1">github<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://ssadakk.github.io/tags/hugo/" class="tag-list-link" rel="1">hugo<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://ssadakk.github.io/tags/java/" class="tag-list-link" rel="1">java<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://ssadakk.github.io/tags/mvvm/" class="tag-list-link" rel="1">mvvm<span
+               class="tag-list-count">1</span></a>
+            
+    </div>
+<script>
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    tagCloud('#tag-cloud-list a',  8 ,  20 );
+  }
+};
+
+function tagCloud(where, min, max) {
+  let iMax = 0;
+  let iMin = 0;
+  $(where).each(function() {
+    let weight = Number($(this).attr("rel"));
+    if(iMax < weight) iMax = weight;
+    if(iMin > weight || iMin == 0) iMin = weight;
+  });
+  let step = (max - min)/(iMax - iMin);
+  $(where).each(function() {
+    let weight = $(this).attr("rel") - iMin;
+    $(this).css({"font-size": min + (weight * step) + 'px'});
+  });
+};
+</script>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://ssadakk.github.io/categories/android/" class="category-list-link">android</a><span class="category-list-count">3</span></li>
+            <li class="category-list-item"><a href="https://ssadakk.github.io/categories/etc/" class="category-list-link">etc</a><span class="category-list-count">1</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://ssadakk.github.io/tags/aac/" class="tag-list-link">aac</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://ssadakk.github.io/tags/android/" class="tag-list-link">android</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://ssadakk.github.io/tags/blog/" class="tag-list-link">blog</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://ssadakk.github.io/tags/exeception/" class="tag-list-link">exeception</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://ssadakk.github.io/tags/github/" class="tag-list-link">github</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://ssadakk.github.io/tags/hugo/" class="tag-list-link">hugo</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://ssadakk.github.io/tags/java/" class="tag-list-link">java</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://ssadakk.github.io/tags/mvvm/" class="tag-list-link">mvvm</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://ssadakk.github.io/post/android/view-binding/" class="title">View Binding</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-03-11 16:23:00 &#43;0900 KST" itemprop="datePublished">2021-03-11</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://ssadakk.github.io/post/android/android-aac-overview/" class="title">Android AAC Overview</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-03-11 15:43:17 &#43;0900 KST" itemprop="datePublished">2021-03-11</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://ssadakk.github.io/post/android/comparison-method-violation/" class="title">Comparison Method Violation</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-03-10 14:55:19 &#43;0900 KST" itemprop="datePublished">2021-03-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://ssadakk.github.io/post/blog/create-blog-with-hugo/" class="title">Hugo, github 이용해 블로그 생성</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-03-10 10:53:46 &#43;0900 KST" itemprop="datePublished">2021-03-10</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/post/android/view-binding/"
+    >View Binding</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://ssadakk.github.io/post/android/view-binding/" class="article-date">
+  <time datetime="2021-03-11 16:23:00 &#43;0900 KST" itemprop="datePublished">2021-03-11</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/android/"> android </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/android/"> android </a>
+  </span>
+
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 2 minutes </span>
       </div>
     </div>
-  </div>
-</header>
-
-<div class="top-area">
-  <div class="top-video top-video-small ">
-    <video preload="preload" class="video" autoplay="autoplay" loop="loop" muted>
-      <source src="/video/bg.webp" type="video/webp" />
-      <source src="/video/bg.mp4" type="video/mp4" />
-    </video>
-    <div class="container">
-      <div class="title-message">
-        
-        <a href="https://ssadakk.github.io/post/android/view-binding/">
-          <h1>
-            View Binding
-          </h1>
-        </a>
-        
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8">
-
-<div class="post-title">
-  <a href="https://ssadakk.github.io/post/android/view-binding/">
-    <div class="post-meta">
-      <time></time>
-    </div>
-  </a>
-</div>
-<section class="post-content">
-  
-  <p>View binding 에 대해 알아볼것</p>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>View binding 에 대해 알아볼것</p>
 <h2 id="view-binding">View Binding</h2>
 <p>이전까진, 대부분의 경우 View 를 결합하기 위해 findViewById() 를 사용했음.<br>
 View Binding 을 사용하면 좀더 쉽게 View 를 컨트롤 할 수 있다.<br>
 코틀린이 익숙하지 않아 앞으로의 스터디는 코틀린 위주로 진행.</p>
 <h2 id="gradle-설정">Gradle 설정</h2>
 <p>View binding 사용하기 위해선, 먼저 viewBinding 요소를 gradle 에 추가해야됨.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">android<span style="color:#f92672">{</span>
-    <span style="color:#f92672">...</span>
-    viewBinding<span style="color:#f92672">{</span>
-        enabled <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="usage">Usage</h2>
+<pre><code class="language-gradle">android{
+    ...
+    viewBinding{
+        enabled = true
+    }
+}
+</code></pre>
+<h2 id="usage">Usage</h2>
 <p>위처럼 View Binding 이 설정되면, XML layout 파일의 Binding class가 생성됨.<br>
 형식은 XML 이름 + Binding.<br>
 예를들어, result_profile.xml 파일이 있는경우 Binding class 의 이름은 <strong>ResultProfileBinding</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;LinearLayout</span> <span style="color:#960050;background-color:#1e0010">...</span> <span style="color:#f92672">&gt;</span>
-    <span style="color:#f92672">&lt;TextView</span> <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/name&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;ImageView</span> <span style="color:#a6e22e">android:cropToPadding=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;Button</span> <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/button&#34;</span>
-        <span style="color:#a6e22e">android:background=</span><span style="color:#e6db74">&#34;@drawable/rounded_button&#34;</span> <span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;/LinearLayout&gt;</span>
-</code></pre></div><p>이런 Layout 이 있을 경우, TextView, Button 은 ID 가 있기 때문에 Binding class 통해 참조 가능하지만 ImageView 의 경우에는 ID 가 없어 참조 불가하다.</p>
+<pre><code class="language-xml">&lt;LinearLayout ... &gt;
+    &lt;TextView android:id=&quot;@+id/name&quot; /&gt;
+    &lt;ImageView android:cropToPadding=&quot;true&quot; /&gt;
+    &lt;Button android:id=&quot;@+id/button&quot;
+        android:background=&quot;@drawable/rounded_button&quot; /&gt;
+&lt;/LinearLayout&gt;
+</code></pre>
+<p>이런 Layout 이 있을 경우, TextView, Button 은 ID 가 있기 때문에 Binding class 통해 참조 가능하지만 ImageView 의 경우에는 ID 가 없어 참조 불가하다.</p>
 <h3 id="usage-in-activity">Usage in Activity</h3>
 <p>inflate() 호출해 getRoot() 메소드로 root view 참조</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">override</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">onCreate</span>(savedInstanceState: Bundle) {
-    <span style="color:#66d9ef">super</span>.onCreate(savedInstanceState)
-    binding = ResultProfileBinding.inflate(layoutInflater) <span style="color:#75715e">// XML 파일로 class 결정
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">val</span> view = binding.root
+<pre><code class="language-kotlin">override fun onCreate(savedInstanceState: Bundle) {
+    super.onCreate(savedInstanceState)
+    binding = ResultProfileBinding.inflate(layoutInflater) // XML 파일로 class 결정
+    val view = binding.root
     setContentView(view)
 }
-</code></pre></div><p>각 child view 는 아래처럼 참조 가능</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">binding.name.text = viewModel.name
+</code></pre>
+<p>각 child view 는 아래처럼 참조 가능</p>
+<pre><code class="language-kotlin">binding.name.text = viewModel.name
 binding.button.setOnClickListener { viewModel.userClicked() }
-</code></pre></div><h3 id="usage-in-fragment">Usage in Fragment</h3>
+</code></pre>
+<h3 id="usage-in-fragment">Usage in Fragment</h3>
 <h4 id="inflate-fragment">Inflate Fragment</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">override</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">onCreateView</span>(
+<pre><code class="language-kotlin">override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        <span style="color:#75715e">// Inflate the layout for this fragment
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">val</span> binding = FragmentBlankBinding.inflate(inflater, container, <span style="color:#66d9ef">false</span>) <span style="color:#75715e">//use inflat
-</span><span style="color:#75715e"></span>        fragmentBlankBinding = binding
-        binding.textViewFragment.text = getString(R.string.hello_from_vb_inflatefragment) <span style="color:#75715e">//get info from view
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> binding.root
+        // Inflate the layout for this fragment
+        val binding = FragmentBlankBinding.inflate(inflater, container, false) //use inflat
+        fragmentBlankBinding = binding
+        binding.textViewFragment.text = getString(R.string.hello_from_vb_inflatefragment) //get info from view
+        return binding.root
     }
-</code></pre></div><h4 id="bind-fragment">Bind Fragment</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BindFragment</span> : Fragment(R.layout.fragment_blank) { <span style="color:#75715e">//Layout 명시
-</span><span style="color:#75715e"></span>
-    <span style="color:#75715e">// Scoped to the lifecycle of the fragment&#39;s view (between onCreateView and onDestroyView)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> fragmentBlankBinding: FragmentBlankBinding? = <span style="color:#66d9ef">null</span>
+</code></pre>
+<h4 id="bind-fragment">Bind Fragment</h4>
+<pre><code class="language-kotlin">class BindFragment : Fragment(R.layout.fragment_blank) { //Layout 명시
 
-    <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">onViewCreated</span>(view: View, savedInstanceState: Bundle?) {
-        <span style="color:#66d9ef">super</span>.onViewCreated(view, savedInstanceState)
-        <span style="color:#66d9ef">val</span> binding = FragmentBlankBinding.bind(view) <span style="color:#75715e">// Bind !!!!
-</span><span style="color:#75715e"></span>        fragmentBlankBinding = binding
-        binding.textViewFragment.text = getString(string.hello_from_vb_bindfragment) <span style="color:#75715e">//view control
-</span><span style="color:#75715e"></span>    }
+    // Scoped to the lifecycle of the fragment's view (between onCreateView and onDestroyView)
+    private var fragmentBlankBinding: FragmentBlankBinding? = null
 
-    <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">onDestroyView</span>() {
-        <span style="color:#75715e">// Consider not storing the binding instance in a field, if not needed.
-</span><span style="color:#75715e"></span>        fragmentBlankBinding = <span style="color:#66d9ef">null</span>
-        <span style="color:#66d9ef">super</span>.onDestroyView()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentBlankBinding.bind(view) // Bind !!!!
+        fragmentBlankBinding = binding
+        binding.textViewFragment.text = getString(string.hello_from_vb_bindfragment) //view control
+    }
+
+    override fun onDestroyView() {
+        // Consider not storing the binding instance in a field, if not needed.
+        fragmentBlankBinding = null
+        super.onDestroyView()
     }
 }
-</code></pre></div><h2 id="findviewbyid-와의-차이점">findViewById 와의 차이점</h2>
+</code></pre>
+<h2 id="findviewbyid-와의-차이점">findViewById 와의 차이점</h2>
 <ol>
 <li>Null Safe
 직접 참조를 생성하지 않으므로 , Null exception 발생의 위험이 적음 (기존에는 작은 실수에 의해 생각보다 많이 발생 )</li>
@@ -180,144 +436,120 @@ Type 이 xml의 정의와 일치하므로, 예외 발생 위험 없음.
 <li>양방향 데이터 결합 지원하지 않음</li>
 </ul>
 <p>위의 상황을 고려해 두가지를 적절히 사용하는것이 바람직.</p>
-</section>
-<time>
-  <i class="far fa-clock"></i>
-  Thursday, Mar 11, 2021 16:23
-</time>
- 
-<i class="far fa-folder"></i>
-<a href="https://ssadakk.github.io//categories/android">android</a>
- 
-<div class="post-comment">
-  <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "myblog-yamhhn4gzh" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-
-<hr class="summary-sep" />
-<div class="recommend-articles">
-  <h3>
-    Recommend these articles
-  </h3>
-  <ul>
-    
-    <li>
-      <a href="https://ssadakk.github.io/post/android/android-aac-overview/" rel="prev">
-        <span>Android AAC Overview</span>
-      </a>
-    </li>
-     
-  </ul>
-</div>
- 
-        </div>
-
-        <div id="sidebar" class="col-12 col-md-8 col-lg-4">
-          <div class="post-sidebar-area">
-<div id="post-toc" class="sidebar-widget-area">
-  <div class="title">
-    <i class="fa fa-list"></i>
-    TOC
-  </div>
-  <div class="widget-content">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#view-binding">View Binding</a></li>
-    <li><a href="#gradle-설정">Gradle 설정</a></li>
-    <li><a href="#usage">Usage</a>
-      <ul>
-        <li><a href="#usage-in-activity">Usage in Activity</a></li>
-        <li><a href="#usage-in-fragment">Usage in Fragment</a></li>
-      </ul>
-    </li>
-    <li><a href="#findviewbyid-와의-차이점">findViewById 와의 차이점</a></li>
-    <li><a href="#data-binding-과의-비교">Data binding 과의 비교</a></li>
-  </ul>
-</nav>
-  </div>
-</div>
-<div class="sidebar-widget-area">
-  <div class="title">
-    <i class="fa fa-tag"></i>
-    Tags
-  </div>
-  <div class="widget-content">
-     
-    <a href="https://ssadakk.github.io/tags/android" class="badge badge-secondary">android</a>
-  </div>
-</div>
-
-          </div>
-        </div>
-      </div>
     </div>
-<footer class="footer-area">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-4">
-        <div class="footer-single-widget">
-          <div class="copywrite-text mt-30">
-            <p>
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved
-            </p>
-          </div>
+    <div class="article-footer">
+
+    </div>
+  </article>
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://ssadakk.github.io/post/android/android-aac-overview/" title="Android AAC Overview"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
         </div>
-      </div>
+    </div>
+</nav>
+
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/ssadakk" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2021  -
+    2021
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
     </div>
   </div>
 </footer>
 
-
-<script src="/vendor/jquery-2.2.4.min.js"></script>
-<script src="/vendor/bootstrap/popper.min.js"></script>
-<script src="/vendor/bootstrap/bootstrap.min.js"></script>
-<script src="/vendor/native-console.js"></script>
-<script src="/vendor/jquery.easing.1.3.js"></script>
-<script src="/vendor/jquery.scrollUp.min.js"></script>
-
-
-<script src="/js/active.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
 </script>
 
 
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1LKR3P67X"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "G-P1LKR3P67X");
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
- 
-</body>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://ssadakk.github.io/js/application.min.a94ab19cb63a95c8d7fbd7b85cab3ddeea8c369bdf75b9cab6708787ead123af.js"></script>
+<script src="https://ssadakk.github.io/js/plugin.min.19c5bcb2fb0789ab4f2b7834e5ceb5e92635645605bab902c1024b25f1502364.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/ssadakk.github.io\/',
+            CONTENT_URL: 'https:\/\/ssadakk.github.io\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://ssadakk.github.io/js/insight.min.4a2d52de4bfff73e0c688404fe3d17c9a3ae12d9888e1e1ac9c690e4890de2ded50fe55f2b819c2ba55435a76f396f3ea6805765f0b0af5635cdf74ea459eab0.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-P1LKR3P67X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
 </html>

@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My dev space</title>
+    <title>MyDevSpace</title>
     <link>https://ssadakk.github.io/</link>
-    <description>Recent content on My dev space</description>
+    <description>Recent content on MyDevSpace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Thu, 11 Mar 2021 16:23:00 +0900</lastBuildDate><atom:link href="https://ssadakk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Mar 2021 16:23:00 +0900</lastBuildDate>
+    
+        <atom:link href="https://ssadakk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>View Binding</title>
       <link>https://ssadakk.github.io/post/android/view-binding/</link>
