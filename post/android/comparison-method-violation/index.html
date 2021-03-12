@@ -343,6 +343,8 @@ function tagCloud(where, min, max) {
     <a class="article-tag-link" href="/tags/exeception/"> exeception </a>
   </span>
 
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/post/android/comparison-method-violation/#comments"
+            class="article-comment-link">Comments</a></span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 2 minutes </span>
       </div>
     </div>
@@ -406,6 +408,12 @@ Long.compare() 를 사용하거나 Comparator.comparing(RecExtProgram::getStartT
 
     </div>
   </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
     <div class="bar-inner">
         <ul class="pager pull-left">
@@ -509,6 +517,18 @@ Long.compare() 를 사용하거나 Comparator.comparing(RecExtProgram::getStartT
     });
 </script>
 
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/ssadakk.github.io\/post\/android\/comparison-method-violation\/';
+        this.page.identifier = 'myblog-yamhhn4gzh';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'myblog-yamhhn4gzh' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
 <script type="application/javascript">
 var doNotTrack = false;

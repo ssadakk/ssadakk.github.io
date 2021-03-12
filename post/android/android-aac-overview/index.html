@@ -329,7 +329,7 @@ function tagCloud(where, min, max) {
         
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://ssadakk.github.io/post/android/android-aac-overview/" class="">
+<a href="https://ssadakk.github.io/post/android/android-aac-overview/" class="article-date">
   <time datetime="2021-03-11 15:43:17 &#43;0900 KST" itemprop="datePublished">2021-03-11</time>
 </a>
 </span>
@@ -344,6 +344,8 @@ function tagCloud(where, min, max) {
     <a class="article-tag-link" href="/tags/mvvm/"> MVVM </a>
   </span>
 
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/post/android/android-aac-overview/#comments"
+            class="article-comment-link">Comments</a></span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 1 minutes </span>
       </div>
     </div>
@@ -366,6 +368,12 @@ Repository 는 유일하게 여러개의 다른 클래스에 종속된다.</p>
 
     </div>
   </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
     <div class="bar-inner">
         <ul class="pager pull-left">
@@ -469,6 +477,18 @@ Repository 는 유일하게 여러개의 다른 클래스에 종속된다.</p>
     });
 </script>
 
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/ssadakk.github.io\/post\/android\/android-aac-overview\/';
+        this.page.identifier = 'myblog-yamhhn4gzh';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'myblog-yamhhn4gzh' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
 <script type="application/javascript">
 var doNotTrack = false;
