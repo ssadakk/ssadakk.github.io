@@ -5,10 +5,19 @@
     <link>https://ssadakk.github.io/tags/</link>
     <description>Recent content in Tags on MyDevSpace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Mar 2021 16:23:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 12 Mar 2021 15:47:02 +0900</lastBuildDate>
     
         <atom:link href="https://ssadakk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Data Binding</title>
+      <link>https://ssadakk.github.io/post/android/data-binding/</link>
+      <pubDate>Fri, 12 Mar 2021 15:47:02 +0900</pubDate>
+      
+      <guid>https://ssadakk.github.io/post/android/data-binding/</guid>
+      <description>&lt;p&gt;Data Binding 에 대한 정리&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>View Binding</title>

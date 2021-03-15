@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Data Binding</title>
+      <link>https://ssadakk.github.io/post/android/data-binding/</link>
+      <pubDate>Fri, 12 Mar 2021 15:47:02 +0900</pubDate>
+      
+      <guid>https://ssadakk.github.io/post/android/data-binding/</guid>
+      <description>&lt;p&gt;Data Binding 에 대한 정리&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>View Binding</title>
       <link>https://ssadakk.github.io/post/android/view-binding/</link>
       <pubDate>Thu, 11 Mar 2021 16:23:00 +0900</pubDate>
