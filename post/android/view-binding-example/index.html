@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>
-        MyDevSpace</title>
+        Data Binding 예제 - MyDevSpace
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,25 +20,29 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="Android " />
     <meta name="generator" content="Hugo 0.81.0 with theme pure" />
-    <title>MyDevSpace</title>
+    <title>Data Binding 예제 - MyDevSpace</title>
     
-    <link rel="alternate" type="application/rss+xml" href="https://ssadakk.github.io/series/index.xml" title="MyDevSpace" />
     
     <link rel="stylesheet" href="https://ssadakk.github.io/css/style.min.b4b742918d33349bb411274c2c6de779fe2fda4d2101d2703f6bc0fc0a19edf2.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="Series" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ssadakk.github.io/series/" />
+    <meta property="og:title" content="Data Binding 예제" />
+<meta property="og:description" content="Android " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ssadakk.github.io/post/android/view-binding-example/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-16T14:27:15&#43;09:00" />
+<meta property="article:modified_time" content="2021-03-16T14:27:15&#43;09:00" />
 
-<meta itemprop="name" content="Series">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Series"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="name" content="Data Binding 예제">
+<meta itemprop="description" content="Android "><meta itemprop="datePublished" content="2021-03-16T14:27:15&#43;09:00" />
+<meta itemprop="dateModified" content="2021-03-16T14:27:15&#43;09:00" />
+<meta itemprop="wordCount" content="291">
+<meta itemprop="keywords" content="android,databinding," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Data Binding 예제"/>
+<meta name="twitter:description" content="Android "/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -316,48 +321,161 @@ function tagCloud(where, min, max) {
 
     
     
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
 
-<main class="main" role="main">
-    <article class="content article article-archives article-type-list" itemscope="">
-        <header class="article-header">
-            <h1 itemprop="title">Series</h1>
-            <p class="text-muted">Total 6 articles</p>
-        </header>
-        <div class="article-body">
-                        <section class="panel panel-default b-no">
-                            <div class="panel-heading" role="tab">
-                                <h3 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse2021" aria-expanded="true">
-                                        <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-                                        &nbsp;2021
-                                    </a>
-                                </h3>
-                            </div>
-                            <div id="collapse2021" class="panel-collapse collapse in" role="tabpanel"
-                                aria-labelledby="heading2021">
-                                <div class="panel-body">
-                                    <div class="collection"><a href="https://ssadakk.github.io/post/android/view-binding-example/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2021-03-16 14:27:15 &#43;0900 KST" itemprop="datePublished" style="margin-right: 5px;">2021-03-16
-    </time>Data Binding 예제
-</a><a href="https://ssadakk.github.io/post/android/data-binding/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2021-03-12 15:47:02 &#43;0900 KST" itemprop="datePublished" style="margin-right: 5px;">2021-03-12
-    </time>Data Binding
-</a><a href="https://ssadakk.github.io/post/android/view-binding/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2021-03-11 16:23:00 &#43;0900 KST" itemprop="datePublished" style="margin-right: 5px;">2021-03-11
-    </time>View Binding
-</a><a href="https://ssadakk.github.io/post/android/android-aac-overview/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2021-03-11 15:43:17 &#43;0900 KST" itemprop="datePublished" style="margin-right: 5px;">2021-03-11
-    </time>Android AAC Overview
-</a><a href="https://ssadakk.github.io/post/android/comparison-method-violation/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2021-03-10 14:55:19 &#43;0900 KST" itemprop="datePublished" style="margin-right: 5px;">2021-03-10
-    </time>Comparison Method Violation
-</a><a href="https://ssadakk.github.io/post/blog/create-blog-with-hugo/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2021-03-10 10:53:46 &#43;0900 KST" itemprop="datePublished" style="margin-right: 5px;">2021-03-10
-    </time>Hugo, github 이용해 블로그 생성
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/post/android/view-binding-example/"
+    >Data Binding 예제</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://ssadakk.github.io/post/android/view-binding-example/" class="article-date">
+  <time datetime="2021-03-16 14:27:15 &#43;0900 KST" itemprop="datePublished">2021-03-16</time>
 </a>
-        </div></div></div></section>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/android/"> android </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/android/"> android </a>
+    <a class="article-tag-link" href="/tags/databinding/"> databinding </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/post/android/view-binding-example/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 2 minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>Android Data Binding 관련 간단한 예제</p>
+<h2 id="간단한-예제-작성">간단한 예제 작성</h2>
+<p>Data Binding 관련해서 아무래도 간단한 예제가 필요할 듯 하여 참고할만한 예제를 작성.
+Recycler view 에도 붙여보려고 했는데, 따로 추가하여 작성할 예정
+전체 코드는
+<a href="https://github.com/ssadakk/SampleDataBinding">https://github.com/ssadakk/SampleDataBinding</a> 에서 확인 가능</p>
+<h2 id="전체-화면-개요">전체 화면 개요</h2>
+<p><img src="1.png" alt="1.png"><br>
+진짜 간단하다. 버튼을 누르면 viewmodel 의 카운터를 증가시킬 것이고 이것을 바로 textview 와  progress bar 에 적용시키도록 만들것. 대충만 이해하기 위한 것이므로 이정도면 충분.</p>
+<h2 id="layout-작성">Layout 작성</h2>
+<pre><code class="language-html">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;layout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&gt;
+
+    &lt;data&gt;
+        &lt;variable
+            name=&quot;viewmodel&quot;
+            type=&quot;com.ssadakk.sampledatabinding.LiveDataViewModel&quot; /&gt;
+    &lt;/data&gt;
+
+    &lt;LinearLayout
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;
+        android:orientation=&quot;vertical&quot;&gt;
+        &lt;TextView
+            android:id=&quot;@+id/txtLike&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:text=&quot;@{Integer.toString(viewmodel.counter)}&quot;
+            /&gt;
+        &lt;ProgressBar
+            android:id=&quot;@+id/progressBar&quot;
+            style=&quot;?android:attr/progressBarStyleHorizontal&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:max=&quot;@{100}&quot;
+            app:progressScaled=&quot;@{viewmodel.counter}&quot;
+            app:hideIfZero=&quot;@{viewmodel.counter}&quot;
+            /&gt;
+        &lt;Button
+            android:id=&quot;@+id/btnLike&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:onClick=&quot;@{() -&gt; viewmodel.addCounter()}&quot;
+            android:text=&quot;BtnLike&quot;/&gt;
+    &lt;/LinearLayout&gt;
+&lt;/layout&gt;
+</code></pre>
+<p>Variable 을 선언하여 view model 에 접근하여 데이터 세팅 할 수 있다.
+TextView 에는 counter 값을 표시하도록 했고, Progress bar 에는 progress 를 설정했는데 이거는 뒤에 다시 설명<br>
+버튼을 눌렀을 경우에는 viewModel 의 addCounter() 메서드를 통해 counter 증가 시켜줬다.</p>
+<h2 id="bindingadapters-생성">BindingAdapters 생성</h2>
+<p>ProgressBar 에 보면 android:max=&quot;@{100}&quot;, app:progressScaled=&quot;@{viewmodel.counter}&quot;, app:hideIfZero=&quot;@{viewmodel.counter}&quot; 이런것 들이 보이는데, 데이터 바인딩 어댑터를 이용해 적절한 값을 설정하도록 설정 할 수 있다.</p>
+<p>BindingAdapters.kt 파일은 아래처럼 설정했다.</p>
+<pre><code class="language-kotlin">object BindingAdapters {
+
+    @BindingAdapter(&quot;app:hideIfZero&quot;)
+    @JvmStatic fun hideIfZero(view: View, number: Int) {
+        if(number === 0) view.visibility = View.INVISIBLE else view.visibility = View.VISIBLE
+    }
+
+    @BindingAdapter(value = [&quot;app:progressScaled&quot;, &quot;android:max&quot;], requireAll = true)
+    @JvmStatic fun setProgress(progressBar: ProgressBar, counter: Int, max: Int)  {
+        Log.d(&quot;hmjoo&quot;, &quot;counter : $counter , max : $max&quot;)
+        progressBar.progress = (counter)
+    }
+}
+</code></pre>
+<p>BindingAdapters 는 class 가 아니라 object 로 정의됨에 주의.<br>
+app:hideIfZero 라는 이름으로 정의한 녀석은, counter 를 전달받아 0 인경우 투명하게 처리</p>
+<p>그 아래는 progress 를 세팅하도록 설정</p>
+<h2 id="run">Run~</h2>
+<p>위 처럼 설정을 하면 버튼을 클릭하면 counter 가 증가하며 UI 에 실시간 반영되는 것을 볼 수 있다.
+예전에 비해 상당히 간편해졌으며, 문득 예전에 진행했던 프로젝트가 생각난다. Databinding 을 활용했다면 UI 이슈가 상당량 줄어들었을 것으로 생각된다. 다음에는 RecyclerView를 이용해 DataBinding 을 사용해봐야지.</p>
+    </div>
+    <div class="article-footer">
+
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://ssadakk.github.io/post/android/data-binding/" title="Data Binding"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
         </div>
-    </article>
+    </div>
+</nav>
+
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/ssadakk" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -426,6 +544,20 @@ function tagCloud(where, min, max) {
         
         hasInnerContainers: true,
     });
+</script>
+
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/ssadakk.github.io\/post\/android\/view-binding-example\/';
+        this.page.identifier = 'myblog-yamhhn4gzh';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'myblog-yamhhn4gzh' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 
 <script type="application/javascript">
