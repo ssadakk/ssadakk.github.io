@@ -5,10 +5,19 @@
     <link>https://ssadakk.github.io/post/</link>
     <description>Recent content in Posts on MyDevSpace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Mar 2021 14:27:15 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Mar 2021 23:22:56 +0900</lastBuildDate>
     
         <atom:link href="https://ssadakk.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Live Data</title>
+      <link>https://ssadakk.github.io/post/android/live-data/</link>
+      <pubDate>Tue, 16 Mar 2021 23:22:56 +0900</pubDate>
+      
+      <guid>https://ssadakk.github.io/post/android/live-data/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Data Binding 예제</title>

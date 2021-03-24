@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>
-        MyDevSpace</title>
+        Live Data - MyDevSpace
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,23 +20,28 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="" />
     <meta name="generator" content="Hugo 0.81.0 with theme pure" />
-    <title>MyDevSpace</title>
+    <title>Live Data - MyDevSpace</title>
     
     
     <link rel="stylesheet" href="https://ssadakk.github.io/css/style.min.b4b742918d33349bb411274c2c6de779fe2fda4d2101d2703f6bc0fc0a19edf2.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="404 Page not found" />
+    <meta property="og:title" content="Live Data" />
 <meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ssadakk.github.io/404.html" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ssadakk.github.io/post/android/live-data/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-16T23:22:56&#43;09:00" />
+<meta property="article:modified_time" content="2021-03-16T23:22:56&#43;09:00" />
 
-<meta itemprop="name" content="404 Page not found">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
+<meta itemprop="name" content="Live Data">
+<meta itemprop="description" content=""><meta itemprop="datePublished" content="2021-03-16T23:22:56&#43;09:00" />
+<meta itemprop="dateModified" content="2021-03-16T23:22:56&#43;09:00" />
+<meta itemprop="wordCount" content="604">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Live Data"/>
 <meta name="twitter:description" content=""/>
 
     <!--[if lte IE 9]>
@@ -315,37 +321,199 @@ function tagCloud(where, min, max) {
 
     
     
-<main class="main" role="main">
-    <div class="content">
-        <article class="article">
-            <div class="article-header">
-                <h1 class="article-title" itemprop="name">
-                    <a href="#">404 Not Found</a>
-                </h1>
-            </div>
-            <div class="article-meta">
-                
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
 
-                <span class="post-comment"><i class="icon icon-comment"></i> <a href="/404.html#comments"
-                        class="article-comment-link">Comments</a></span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 0 minutes </span>
-            </div>
-            <div class="article-entry marked-body" itemprop="articleBody">
-                <br>
-                <p>The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
-                <a href="/">Go Back</a>
-            </div>
-            <div class="article-footer">
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/post/android/live-data/"
+    >Live Data</a
+  >
+</h1>
 
-            </div>
-        </article>
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://ssadakk.github.io/post/android/live-data/" class="article-date">
+  <time datetime="2021-03-16 23:22:56 &#43;0900 KST" itemprop="datePublished">2021-03-16</time>
+</a>
+</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/post/android/live-data/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 3 minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h2 id="live-data">Live Data?</h2>
+<p>LiveData 는 데이터 홀더 클래스. 특이한 점은 LiveData 는 수명 주기를 인식한다. Activity, fragment, service 의 라이프사이클을 모두 인식. 이를 통해 활둥 상태에 있는 Observer 만 update 한다.</p>
+<h2 id="live-data의--이점">Live Data의  이점</h2>
+<ul>
+<li>UI 와 Data 상태 일치 보장</li>
+<li>Memory leak 없음</li>
+<li>Stop 상태로 인한 비정상 종료 없음</li>
+<li>LifeCycle 을 수동으로 처리하지 않는다.</li>
+<li>최신 데이터 유지</li>
+<li>적절한 구성 변경</li>
+<li>리소스 공유</li>
+</ul>
+<h2 id="livedata-사용">LiveData 사용</h2>
+<p>대략적인 LiveData 사용 순서는 아래와 같다.</p>
+<ol>
+<li>LiveData instance 생성. 일반적으로 ViewModel 클래스 내에 생성</li>
+<li>onChanged() 메서드를 정의하는 Observer instance 생성, LiveData 데이터 변경시 발생하는 작업을 제어. 일반적으로 액티비티, 프래그먼트 같은 UI controller 에 생성</li>
+<li>observe() 메서드로 LiveData 에 Observer 연결</li>
+</ol>
+<p>대략적으로 보자면 아래와 같이 사용할 수 있다.</p>
+<pre><code>class LiveDataViewModel : ViewModel() {
+    private val _counter = MutableLiveData(0)
+    val counter: LiveData&lt;Int&gt; = _counter
+}
+</code></pre>
+<pre><code>val dataObserver: Observer&lt;ArrayList&lt;User&gt;&gt; = Observer { livedata -&gt;
+    Log.e(&quot;hmjoo&quot;, &quot;in data observer&quot;)
+    data.value = livedata
+    var newAdapter = UserProfileAdapter(data)
+    binding.recyclerView.adapter = newAdapter
+}
+viewModel.liveData.observe(this, dataObserver)
+</code></pre>
+<p>아래는 좀더 자세한 설명</p>
+<h3 id="livedata-instance-생성">LiveData instance 생성</h3>
+<p>LiveData 는 Collection 객체를 비롯해 모든 데이터와 함께 사용 가능한 래퍼. ViewModel 내에 저장.<br>
+ViewModel 객체의 UI 를 업데이트하는 LiveData 를 저장해야 한다.</p>
+<ul>
+<li>Activity, Fragment 가 지나치게 커지지 않게 하기 위해.</li>
+<li>LiveData 객체를 특정 Activity, Fragment 에서 분리, 구성 변경에도 LiveData 객체가 유지되도록 하기 위해.</li>
+</ul>
+<h2 id="livedata-observe">LiveData Observe</h2>
+<p>Observe 의 경우, onCreate() 에서 observe 하는것이 적합. 이유는,</p>
+<ul>
+<li>onResume() 에서 중복 호출을 하지 않도록 하기 위해,</li>
+<li>Activity, Fragment 가 active 되자마자 표시될 데이터를 포함할 수 있도록 하기 위해.</li>
+</ul>
+<h2 id="livedata-update">LiveData Update</h2>
+<p>LiveData는 저장된 데이터를 업데이트하는 public method 가 없다. MutableLiveData 클래스는 setValue(), postValue() 를 public method 로 한다. LiveData 에 저장된 값을 수정하려면 위 메서드 사용해야 됨.</p>
+<pre><code>button.setOnClickListener {
+    val anotherName = &quot;John Doe&quot;
+    model.currentName.setValue(anotherName)
+}
+</code></pre>
+<p>위 예제를 보면 setValue()를 호출하면 onChanged() 메서드 함께 호출됨.<br>
+네트워크 요청, DB 로드 완료 등에 호출하게 되면 Observer 트리거 될것이고 UI 업데이트 될 것.
+** 메인 스레드에서 LiveData 를 업데이트 하려면 setValue() 를 사용해야 됨. 워커스레드에서 실행한다면 postValue(*) 를 사용**</p>
+<h2 id="room-으로-livedata-사용">Room 으로 LiveData 사용</h2>
+<p>Room 에서 쿼리를 사용하면 LiveData 를 리턴해준다.<br>
+DB 업데이트 될 때 Room 에서는 LiveData 객체를 업데이트하는데 필요한 모든 코드를 생성. 생성된 코드는 백그라운드 스레드에서 비동기적으로 쿼리를 실행. 이 패턴은 UI 와 DB의 데이터의 동기 유지에 유용.</p>
+<h2 id="livedata-확장">LiveData 확장</h2>
+<pre><code>class StockLiveData(symbol: String) : LiveData&lt;BigDecimal&gt;() {
+    private val stockManager = StockManager(symbol)
+
+    private val listener = { price: BigDecimal -&gt;
+        value = price
+    }
+
+    override fun onActive() {
+        stockManager.requestPriceUpdates(listener)
+    }
+
+    override fun onInactive() {
+        stockManager.removeUpdates(listener)
+    }
+}
+</code></pre>
+<ul>
+<li>onActive() : LiveData 에 Active 상태의 Observer 가 있을 때 호출.</li>
+<li>onInactive() : LiveData 에 Active  상태의 Observer 가 없을 때 호출.</li>
+</ul>
+<p>사용하는 부분에서는 아래 처럼 사용 할 수 있다.</p>
+<pre><code>public class MyFragment : Fragment() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val myPriceListener: LiveData&lt;BigDecimal&gt; = ...
+        myPriceListener.observe(viewLifecycleOwner, Observer&lt;BigDecimal&gt; { price: BigDecimal? -&gt;
+            // Update the UI.
+        })
+    }
+</code></pre>
+<p>observe() 에서 LivecycleOwner 를 첫째 인수로 전달, 이렇게 되면 이 observer 는 Fragment lifecycle 에 결합된다.<br>
+이렇게 되면 즉,</p>
+<ul>
+<li>Lifecycle 객체가 활성 상태 아니면 값이 변경 되더라도 observer  호출 되지 않음</li>
+<li>Lifecycle 개체가 제거되면 observer 는 자동으로 삭제.</li>
+<li>LiveData 가 Lifecycle 을 인식한다는 것은, 여러 activity, fragment, service 간에 객체를 공유할수 있다는 뜻. Singletone 으로 LiveData 클래스를 구현하면 간단.</li>
+</ul>
+<h2 id="livedata-transformation">LiveData Transformation</h2>
+<p>Lifecycle 패키지는 LiveData 값을 변경하거나 하기 위한 Transformations 클래스를 제공</p>
+<ul>
+<li>Transformations.map()
+LiveData 객체에 저장된 값에 함수를 적용하고 결과를 다운스트림으로 리턴</li>
+</ul>
+<pre><code>val userLiveData: LiveData&lt;User&gt; = UserLiveData()
+val userName: LiveData&lt;String&gt; = Transformations.map(userLiveData) {
+    user -&gt; &quot;${user.name} ${user.lastName}&quot;
+}
+</code></pre>
+<ul>
+<li>Transformations.switchMap()
+map()과 마찬가지로 LiveData 객체에 저장된 값에 함수를 적용하고 결과를 래핑 해제하여 다운스트림으로 전달. switchMap()에 전달된 함수는 다음 예와 같이 LiveData 객체를 리턴해야 함.</li>
+</ul>
+<pre><code>private fun getUser(id: String): LiveData&lt;User&gt; {
+  ...
+}
+val userId: LiveData&lt;String&gt; = ...
+val user = Transformations.switchMap(userId) { id -&gt; getUser(id) }
+</code></pre>
+<p>Transformatiosns 클래스를 이용하면 lifecycle 전반에 걸쳐 정보를 전달할 수 있음.</p>
+    </div>
+    <div class="article-footer">
+
+    </div>
+  </article>
 <section id="comments">
     <div id="disqus_thread">
         <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </section>
 
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://ssadakk.github.io/post/android/view-binding-example/" title="Data Binding 예제"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
     </div>
+</nav>
+
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/ssadakk" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -414,6 +582,20 @@ function tagCloud(where, min, max) {
         
         hasInnerContainers: true,
     });
+</script>
+
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/ssadakk.github.io\/post\/android\/live-data\/';
+        this.page.identifier = 'myblog-yamhhn4gzh';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'myblog-yamhhn4gzh' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 
 <script type="application/javascript">
