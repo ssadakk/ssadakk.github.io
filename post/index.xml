@@ -5,10 +5,29 @@
     <link>https://ssadakk.github.io/post/</link>
     <description>Recent content in Posts on MyDevSpace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Mar 2021 23:22:56 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 28 Apr 2021 13:49:56 +0900</lastBuildDate>
     
         <atom:link href="https://ssadakk.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kotlin syntax 정리 (Basic)</title>
+      <link>https://ssadakk.github.io/post/kotlin/basic_syntax/</link>
+      <pubDate>Wed, 28 Apr 2021 13:49:56 +0900</pubDate>
+      
+      <guid>https://ssadakk.github.io/post/kotlin/basic_syntax/</guid>
+      <description>&lt;p&gt;안드로이드 개발을 위한 기본적인 Kotlin 문법 정리.&lt;br&gt;
+기본적인 언어의 문법은 알고 있다는 가정 하에, Java와 다른 부분 위주로 정리&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>View Model</title>
+      <link>https://ssadakk.github.io/post/android/view-model/</link>
+      <pubDate>Thu, 01 Apr 2021 09:45:40 +0900</pubDate>
+      
+      <guid>https://ssadakk.github.io/post/android/view-model/</guid>
+      <description>&lt;p&gt;ViewModel 클래스는 Lifecycle을 고려하여 UI 관련 데이터를 저장하고 관리 할 수 있도록 설계되었다. 때문에 화면 회전과 같이 구성이 변경될 때도 데이터를 유지할 수 있다.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Live Data</title>

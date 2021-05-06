@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>
-        MyDevSpace</title>
+        Kotlin syntax 정리 (Basic) - MyDevSpace
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,24 +20,34 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="안드로이드 개발을 위한 기본적인 Kotlin 문법 정리.
+기본적인 언어의 문법은 알고 있다는 가정 하에, Java와 다른 부분 위주로 정리
+" />
     <meta name="generator" content="Hugo 0.82.1 with theme pure" />
-    <title>MyDevSpace</title>
+    <title>Kotlin syntax 정리 (Basic) - MyDevSpace</title>
     
     
     <link rel="stylesheet" href="https://ssadakk.github.io/css/style.min.b4b742918d33349bb411274c2c6de779fe2fda4d2101d2703f6bc0fc0a19edf2.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ssadakk.github.io/404.html" />
+    <meta property="og:title" content="Kotlin syntax 정리 (Basic)" />
+<meta property="og:description" content="안드로이드 개발을 위한 기본적인 Kotlin 문법 정리.
+기본적인 언어의 문법은 알고 있다는 가정 하에, Java와 다른 부분 위주로 정리" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ssadakk.github.io/post/kotlin/basic_syntax/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-04-28T13:49:56&#43;09:00" />
+<meta property="article:modified_time" content="2021-04-28T13:49:56&#43;09:00" />
 
-<meta itemprop="name" content="404 Page not found">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="name" content="Kotlin syntax 정리 (Basic)">
+<meta itemprop="description" content="안드로이드 개발을 위한 기본적인 Kotlin 문법 정리.
+기본적인 언어의 문법은 알고 있다는 가정 하에, Java와 다른 부분 위주로 정리"><meta itemprop="datePublished" content="2021-04-28T13:49:56&#43;09:00" />
+<meta itemprop="dateModified" content="2021-04-28T13:49:56&#43;09:00" />
+<meta itemprop="wordCount" content="451">
+<meta itemprop="keywords" content="Kotlin," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kotlin syntax 정리 (Basic)"/>
+<meta name="twitter:description" content="안드로이드 개발을 위한 기본적인 Kotlin 문법 정리.
+기본적인 언어의 문법은 알고 있다는 가정 하에, Java와 다른 부분 위주로 정리"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -324,37 +335,188 @@ function tagCloud(where, min, max) {
 
     
     
-<main class="main" role="main">
-    <div class="content">
-        <article class="article">
-            <div class="article-header">
-                <h1 class="article-title" itemprop="name">
-                    <a href="#">404 Not Found</a>
-                </h1>
-            </div>
-            <div class="article-meta">
-                
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
 
-                <span class="post-comment"><i class="icon icon-comment"></i> <a href="/404.html#comments"
-                        class="article-comment-link">Comments</a></span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 0 minutes </span>
-            </div>
-            <div class="article-entry marked-body" itemprop="articleBody">
-                <br>
-                <p>The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
-                <a href="/">Go Back</a>
-            </div>
-            <div class="article-footer">
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/post/kotlin/basic_syntax/"
+    >Kotlin syntax 정리 (Basic)</a
+  >
+</h1>
 
-            </div>
-        </article>
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://ssadakk.github.io/post/kotlin/basic_syntax/" class="article-date">
+  <time datetime="2021-04-28 13:49:56 &#43;0900 KST" itemprop="datePublished">2021-04-28</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/kotlin/"> Kotlin </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/kotlin/"> Kotlin </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/post/kotlin/basic_syntax/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 3 minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>안드로이드 개발을 위한 기본적인 Kotlin 문법 정리.<br>
+기본적인 언어의 문법은 알고 있다는 가정 하에, Java와 다른 부분 위주로 정리</p>
+<h3 id="상수와-변수">상수와 변수</h3>
+<p>val, var 두 가지로 상수와 변수를 정의한다.
+val : value, 변하지 않는 상수
+var : variable, 변수</p>
+<h3 id="string-template">String template</h3>
+<p>Kotlin 에서는 String 표시중 $표시를 이용해 변수를 직접 이용할 수 있다.</p>
+<pre><code class="language-java">println(&quot;my name is $name &quot;)
+println(&quot;my name is ${name}&quot;)
+println(&quot;my name is ${firstname + lastname}&quot;)
+println(&quot;is this true? ${1==0}&quot;)
+</code></pre>
+<h3 id="조건식">조건식</h3>
+<h4 id="if">if</h4>
+<p>java 와 거의 비슷, 일반적인 사용은 아래처럼</p>
+<pre><code class="language-java">if( a &gt; b ) {
+	return a
+} else {
+	return b
+}
+</code></pre>
+<p>(a&gt;b)? a : b; 같은 표현은 kotlin 에서는 아래처럼 표현</p>
+<pre><code class="language-java">if(a&gt;b) a else b // (a&gt;b)? a : b 와 동일. 
+</code></pre>
+<h4 id="when">when</h4>
+<p>java 의 switch 로 보면 된다.<br>
+기본적인 사용은 아래와 같다</p>
+<pre><code class="language-java">when(score) {// 일반적인 사용, else 사용되지 않아도 상관없음
+    0 -&gt; println(&quot;0&quot;)
+    1 -&gt; println(&quot;1&quot;)
+    2,3 -&gt; println(&quot;2 or 3&quot;)
+    else -&gt; println(&quot;something else&quot;)
+}
+</code></pre>
+<p>각각 값에 따라서 다른 부분으로 분기</p>
+<p>아래 처럼 범위를 지정해 사용할 수도 있다</p>
+<pre><code class="language-java">when(score) { // 범위를 지정하여 사용하는 경우
+    in 90..100 -&gt; println(&quot;90 ~ 100&quot;)
+    in 10..90 -&gt; println(&quot;10 ~ 90&quot;)
+    else -&gt; println(&quot;otehr value&quot;)
+}
+</code></pre>
+<p><strong>중요</strong> 아래 처럼 값을 할당하는데 when 을 사용하는 경우, else 를 반드시 사용해야 한다.</p>
+<pre><code class="language-java">var b = when(score){
+	1-&gt; 1
+	2-&gt; 2
+	else -&gt; 3 // score 에 따라 값을 리턴하여 b 에 할당, else 없으면 에러
+}
+</code></pre>
+<h4 id="expression--statement">Expression &amp; Statement</h4>
+<blockquote>
+<p>어떤 값을 생성하는것 = Expression
+예를 들어 위에 when 을 이용해 값을 할당하는 경우에는 Expression, 아무것도 하지 않은 경우는 Statement
+Kotlin에서는 아무것도 하지 않는 경우도 Unit을 리턴하기 때문에 모든 함수는 기본적으로 Expression
+자바에서는 Void 형이 존재하므로 Statement 함수 사용 가능.
+자바에서는 if문이 Statement 로 밖에 사용되지 않는 반면 코틀린에서는 원하는 방향으로 사용 가능</p>
+</blockquote>
+<h4 id="array-list">Array, List</h4>
+<p>자바와 동일하게 Array는 사이즈 지정되어 있다<br>
+List 는 일반 ImmutableList 와 MutableList 로 구분</p>
+<pre><code class="language-java">val array = arrayOf(1, 2, 3)
+val list = listOf(1, 2, 3)
+
+val array2 = arrayOf(1, &quot;D&quot;, 3.4f)
+val list2 = listOf(1, &quot;D&quot;, 3L)
+</code></pre>
+<p>List는 값을 참조만 가능하고 변경은 불가능. 값 변경을 위해서는 Mutable list 사용해야 한다. Mutable list 의 하나가 ArrayList</p>
+<pre><code class="language-java">val arayList = arrayListOf&lt;Int&gt;()
+arrayList.add(10)
+arrayList.add(20)
+</code></pre>
+<h4 id="for-while">for, while</h4>
+<p>사용법은 아래와 같다</p>
+<pre><code class="language-kotlin">val students = arrayListOf(&quot;Alice&quot;, &quot;James&quot;, &quot;Roy&quot;) // 기본 arrayList 생성
+
+for(name in students) { // 리스트 반복
+	println(&quot;${name}&quot;)
+}
+
+for((index, name) in students.withIndex()) { //index 와 value 를 함께 사용
+	println(&quot;${index}, ${name}&quot;)
+}
+
+for(i in 1..10) { // 1부터 10까지 반복
+}
+
+for( i in 1..10 step 2 ) { // 1부터 10까지 2씩 증가 (1, 3, 5, 7, 9)
+}
+
+for( i in 10 downTo 1 ){ // 10 부터 1 까지 반복
+}
+
+for( i in 1 until 10) { // 1 부터 9 까지 반복 (10 포함되지 않음)
+}
+
+var index = 0
+while(index &lt; 10) {
+	index++
+}
+
+</code></pre>
+    </div>
+    <div class="article-footer">
+
+    </div>
+  </article>
 <section id="comments">
     <div id="disqus_thread">
         <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </section>
 
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://ssadakk.github.io/post/android/view-model/" title="View Model"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
     </div>
+</nav>
+
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/ssadakk" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -420,6 +582,19 @@ function tagCloud(where, min, max) {
         
         hasInnerContainers: true,
     });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/ssadakk.github.io\/post\/kotlin\/basic_syntax\/';
+        this.page.identifier = 'myblog-yamhhn4gzh';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'myblog-yamhhn4gzh' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 
 <script type="application/javascript">

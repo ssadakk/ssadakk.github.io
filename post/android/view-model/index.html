@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>
-        MyDevSpace</title>
+        View Model - MyDevSpace
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,24 +20,30 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="ViewModel 클래스는 Lifecycle을 고려하여 UI 관련 데이터를 저장하고 관리 할 수 있도록 설계되었다. 때문에 화면 회전과 같이 구성이 변경될 때도 데이터를 유지할 수 있다.
+" />
     <meta name="generator" content="Hugo 0.82.1 with theme pure" />
-    <title>MyDevSpace</title>
+    <title>View Model - MyDevSpace</title>
     
     
     <link rel="stylesheet" href="https://ssadakk.github.io/css/style.min.b4b742918d33349bb411274c2c6de779fe2fda4d2101d2703f6bc0fc0a19edf2.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ssadakk.github.io/404.html" />
+    <meta property="og:title" content="View Model" />
+<meta property="og:description" content="ViewModel 클래스는 Lifecycle을 고려하여 UI 관련 데이터를 저장하고 관리 할 수 있도록 설계되었다. 때문에 화면 회전과 같이 구성이 변경될 때도 데이터를 유지할 수 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ssadakk.github.io/post/android/view-model/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-04-01T09:45:40&#43;09:00" />
+<meta property="article:modified_time" content="2021-04-01T09:45:40&#43;09:00" />
 
-<meta itemprop="name" content="404 Page not found">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="name" content="View Model">
+<meta itemprop="description" content="ViewModel 클래스는 Lifecycle을 고려하여 UI 관련 데이터를 저장하고 관리 할 수 있도록 설계되었다. 때문에 화면 회전과 같이 구성이 변경될 때도 데이터를 유지할 수 있다."><meta itemprop="datePublished" content="2021-04-01T09:45:40&#43;09:00" />
+<meta itemprop="dateModified" content="2021-04-01T09:45:40&#43;09:00" />
+<meta itemprop="wordCount" content="731">
+<meta itemprop="keywords" content="android,AAC," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="View Model"/>
+<meta name="twitter:description" content="ViewModel 클래스는 Lifecycle을 고려하여 UI 관련 데이터를 저장하고 관리 할 수 있도록 설계되었다. 때문에 화면 회전과 같이 구성이 변경될 때도 데이터를 유지할 수 있다."/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -324,37 +331,195 @@ function tagCloud(where, min, max) {
 
     
     
-<main class="main" role="main">
-    <div class="content">
-        <article class="article">
-            <div class="article-header">
-                <h1 class="article-title" itemprop="name">
-                    <a href="#">404 Not Found</a>
-                </h1>
-            </div>
-            <div class="article-meta">
-                
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
 
-                <span class="post-comment"><i class="icon icon-comment"></i> <a href="/404.html#comments"
-                        class="article-comment-link">Comments</a></span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 0 minutes </span>
-            </div>
-            <div class="article-entry marked-body" itemprop="articleBody">
-                <br>
-                <p>The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
-                <a href="/">Go Back</a>
-            </div>
-            <div class="article-footer">
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/post/android/view-model/"
+    >View Model</a
+  >
+</h1>
 
-            </div>
-        </article>
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://ssadakk.github.io/post/android/view-model/" class="article-date">
+  <time datetime="2021-04-01 09:45:40 &#43;0900 KST" itemprop="datePublished">2021-04-01</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/android/"> android </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/android/"> android </a>
+    <a class="article-tag-link" href="/tags/aac/"> AAC </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/post/android/view-model/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 4 minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>ViewModel 클래스는 Lifecycle을 고려하여 UI 관련 데이터를 저장하고 관리 할 수 있도록 설계되었다. 때문에 화면 회전과 같이 구성이 변경될 때도 데이터를 유지할 수 있다.</p>
+<h3 id="개요">개요</h3>
+<p>ViewModel 클래스는 Lifecycle을 고려하여 UI 관련 데이터를 저장하고 관리 할 수 있도록 설계되었다. 때문에 화면 회전과 같이 구성이 변경될 때도 데이터를 유지할 수 있다.<br>
+시스템에서 UI 컨트롤러가 재생성 되는 경우, 즉 화면 회전과 같은 경우, 액티비티가 재생성 되게 되고 데이터를 다시 가져와야 할 것이다.<br>
+데이터가 간단한 경우는 onSaveInstanceState() 메서드로 번들을 통해 데이터를 복원할 수 있지만 Serialize 과정을 거치기에 소량의 데이터에만 적합.</p>
+<p>발생할 수 있는 또 다른 문제는 UI 컨트롤러가 시간이 오래 걸리는 비동기 호출을 자주 할 수 있다는 점.</p>
+<p>액티비티, 프래그먼트 같은 UI 컨트롤러의 목적은 UI 데이터를 표시하거나, 사용자 인풋에 반응, 등 커뮤니케이션 처리. 그런데 여기에 DB, Network 통한 데이터 로드 까지 추가하면 클래스가 너무 커지고 코드가 길어진다.</p>
+<p>이 때문에, View 데이터 관련 부분을 분리하면 쉽고 효율적으로 구현이 가능하다는 접근.</p>
+<h3 id="구현">구현</h3>
+<p>AAC에는 ViewModel 클래스가 제공된다. ViewModel 객체는 구성이 변경되는 동안 자동으로 보관되므로 다음 액티비티나 프래그먼트에서 즉시 사용할 수 있다.<br>
+예를 들어, 앱에서 사용자 목록을 표시해야되는 경우 아래와 같이 ViewModel 에 사용자 목록을 보관하도록 해야 한다.</p>
+<pre><code class="language-java">class MyViewModel : ViewModel() {
+    private val users: MutableLiveData&lt;List&lt;User&gt;&gt; by lazy {
+        MutableLiveData().also {
+            loadUsers()
+        }
+    }
+
+    fun getUsers(): LiveData&lt;List&lt;User&gt;&gt; {
+        return users
+    }
+
+    private fun loadUsers() {
+        // Do an asynchronous operation to fetch users.
+    }
+}
+</code></pre>
+<pre><code class="language-java">class MyActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        // Create a ViewModel the first time the system calls an activity's onCreate() method.
+        // Re-created activities receive the same MyViewModel instance created by the first activity.
+
+        // Use the 'by viewModels()' Kotlin property delegate
+        // from the activity-ktx artifact
+        val model: MyViewModel by viewModels()
+        model.getUsers().observe(this, Observer&lt;List&lt;User&gt;&gt;{ users -&gt;
+            // update UI
+        })
+    }
+}
+</code></pre>
+<p>액티비티가 다시 생성되면 처음 액티비티 에서 생성된 동일한 MyViewModel 객체를 받는다. 액티비티가 끝나면 리소스 정리 위해 ViewModel의 onCleared() 메서드가 호출된다.
+<strong>단, ViewModel은 View, Lifecycle, Activity context 참조를 포함하는 클래스를 참조해서는 안된다</strong></p>
+<p>ViewModel 객체는 LiveData와 같은 LifecycleObservers 가 포함 될 수 있다. 하지만 Observerble 의 변경사항에 대한 처리를 해서는 안된다.</p>
+<h3 id="viewmodel의-수명-주기">ViewModel의 수명 주기</h3>
+<p>ViewModel 객체 범위는 ViewModelProvider에 전달되는 Lifecycle로 지정된다.<br>
+ViewModel은 Activity Lifecycle이 끝날때 까지, Fragment 분리될 때 까지 메모리에 남아있게 된다.</p>
+<p><img src="1.png" alt="viewmodel"></p>
+<p>일반적으로 onCreate() 메서드를 처음 호출할 때 ViewModel 을 생성. 화면 기기 회전될 때 onCreate() 여러번 호출 될 수 있고, 처음 viewmodel 생성되어서부터 액티비티 끝날 때 까지 viewmodel 은 존재하게 됨.</p>
+<h3 id="fragment-간-데이터-공유">Fragment 간 데이터 공유</h3>
+<p>액티비티에 포함된 둘 이상의 프래그먼트는 서로 커뮤니케이션 해야 한다고 알려져 있다. 사용자가 목록에서 항목을 선택하는 프래그먼트와 선택된 항목의 콘텐츠를 표시하는 또 다른 프래그먼트가 있는 사례를 가정할때, 두 프래그먼트 모두 인터페이스를 정의해야 하고 액티비티가 두 프래그먼트를 모두 결합해야 되기 때문에 이 사례는 간단히 처리할 수 있는 작업이 아니다. 또한 두 프래그먼트 모두 다른 프래그먼트가 아직 생성되지 않았거나 표시되지 않는 시나리오도 처리해야 한다.<br>
+이러한 문제는 ViewModel을 이용하면 해결할 수 있다. 아래 샘플코드와 같이 어플리케이션을 처리하기 위한 액티비티를 활용해 ViewModel 을 공유할 수 있다.</p>
+<pre><code class="language-java">class SharedViewModel : ViewModel() {
+    val selected = MutableLiveData&lt;Item&gt;()
+
+    fun select(item: Item) {
+        selected.value = item
+    }
+}
+
+class MasterFragment : Fragment() {
+
+    private lateinit var itemSelector: Selector
+
+    // Use the 'by activityViewModels()' Kotlin property delegate
+    // from the fragment-ktx artifact
+    private val model: SharedViewModel by activityViewModels()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        itemSelector.setOnClickListener { item -&gt;
+            // Update the UI
+        }
+    }
+}
+
+class DetailFragment : Fragment() {
+
+    // Use the 'by activityViewModels()' Kotlin property delegate
+    // from the fragment-ktx artifact
+    private val model: SharedViewModel by activityViewModels()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        model.selected.observe(viewLifecycleOwner, Observer&lt;Item&gt; { item -&gt;
+            // Update the UI
+        })
+    }
+}
+</code></pre>
+<p>위의 샘플에서 보면, 두 프래그먼트 모두 자신이 포함된 activity 를 통해 동일한 SharedViewModel 인스턴스를 받는다.<br>
+이 방법에는 아래와 같은 이점이 있다.</p>
+<ul>
+<li>Activity는 아무것도 할 필요가 없고 위의 관계에 관여할 필요가 없다.</li>
+<li>Fragement 는 SharedViewModel 외에 서로 알 필요가 없다. 둘중 하나가 사라지더라도 다른 하나는 계속 평소대로 작동한다.</li>
+<li>각 Fragment 는 자체 수명 주기가 있으며 다른 Fragment 수명주기에 영향을 받지 않는다.</li>
+</ul>
+<h3 id="viewmodel로-로더-대체하기">ViewModel로 로더 대체하기</h3>
+<p>CursorLoader 와 같은 로더 클래스는 UI 데이터와 DB 간의 동기화를 유지하는데 자주 사용. ViewModel을 몇 가지 클래스와 함께 사용하여 로더를 대체할 수 있다. ViewModel을 사용하면 UI controller가 데이터 로드 작업에서 분리되어 강력한 참조가 적어진다.</p>
+<p>일반적인 로더 사용 방법중 하나로, 앱이 CursorLoader를 사용하고 DB 내용을 Observe 할 수 있다. DB 값이 변경되면 데이터를 새로고치고 UI 업데이트를 진행한다. 
+<img src="2.png" alt="2.png"></p>
+<p>ViewModel을 이용하게 되면 Room 과 LiveData 를 이용하여 로더를 대체한다. ViewModel은 기기 서렂ㅇ이 변경되어도 데이터가 유지되도록 한다. DB 가 변경되면 Room에서 LiveData에 변경을 노티하고 노티를 받은 LiveData는 수정된 데이터로 UI 업데이트
+<img src="2.png" alt="3.png"></p>
+    </div>
+    <div class="article-footer">
+
+    </div>
+  </article>
 <section id="comments">
     <div id="disqus_thread">
         <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </section>
 
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://ssadakk.github.io/post/android/live-data/" title="Live Data"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="https://ssadakk.github.io/post/kotlin/basic_syntax/"
+                    title="Kotlin syntax 정리 (Basic)"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
     </div>
+</nav>
+
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/ssadakk" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -420,6 +585,19 @@ function tagCloud(where, min, max) {
         
         hasInnerContainers: true,
     });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/ssadakk.github.io\/post\/android\/view-model\/';
+        this.page.identifier = 'myblog-yamhhn4gzh';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'myblog-yamhhn4gzh' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 
 <script type="application/javascript">
