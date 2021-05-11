@@ -4,48 +4,62 @@
   
   <url>
     <loc>https://ssadakk.github.io/categories/</loc>
-    <lastmod>2021-04-28T13:49:56+09:00</lastmod>
+    <lastmod>2021-05-11T10:47:11+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ssadakk.github.io/tags/kotlin/</loc>
-    <lastmod>2021-04-28T13:49:56+09:00</lastmod>
+    <lastmod>2021-05-11T10:47:11+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ssadakk.github.io/categories/kotlin/</loc>
-    <lastmod>2021-04-28T13:49:56+09:00</lastmod>
+    <lastmod>2021-05-11T10:47:11+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ssadakk.github.io/post/kotlin/basic_syntax/</loc>
-    <lastmod>2021-04-28T13:49:56+09:00</lastmod>
+    <loc>https://ssadakk.github.io/post/kotlin/expert_syntax/</loc>
+    <lastmod>2021-05-11T10:47:11+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssadakk.github.io/tags/lamda/</loc>
+    <lastmod>2021-05-11T10:47:11+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ssadakk.github.io/</loc>
-    <lastmod>2021-04-28T13:49:56+09:00</lastmod>
+    <lastmod>2021-05-11T10:47:11+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ssadakk.github.io/post/</loc>
-    <lastmod>2021-04-28T13:49:56+09:00</lastmod>
+    <lastmod>2021-05-11T10:47:11+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ssadakk.github.io/tags/</loc>
+    <lastmod>2021-05-11T10:47:11+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssadakk.github.io/post/kotlin/basic_syntax/</loc>
     <lastmod>2021-04-28T13:49:56+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

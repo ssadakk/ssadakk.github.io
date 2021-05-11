@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>
-        MyDevSpace</title>
+        Kotlin Expert Syntax - MyDevSpace
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,25 +20,30 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="Kotlin 관련 조금더 심화된 사용법 정리
+" />
     <meta name="generator" content="Hugo 0.82.1 with theme pure" />
-    <title>MyDevSpace</title>
+    <title>Kotlin Expert Syntax - MyDevSpace</title>
     
-    <link rel="alternate" type="application/rss+xml" href="https://ssadakk.github.io/categories/kotlin/index.xml" title="MyDevSpace" />
     
     <link rel="stylesheet" href="https://ssadakk.github.io/css/style.min.b4b742918d33349bb411274c2c6de779fe2fda4d2101d2703f6bc0fc0a19edf2.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="Kotlin" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ssadakk.github.io/categories/kotlin/" />
+    <meta property="og:title" content="Kotlin Expert Syntax" />
+<meta property="og:description" content="Kotlin 관련 조금더 심화된 사용법 정리" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ssadakk.github.io/post/kotlin/expert_syntax/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-05-11T10:47:11&#43;09:00" />
+<meta property="article:modified_time" content="2021-05-11T10:47:11&#43;09:00" />
 
-<meta itemprop="name" content="Kotlin">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kotlin"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="name" content="Kotlin Expert Syntax">
+<meta itemprop="description" content="Kotlin 관련 조금더 심화된 사용법 정리"><meta itemprop="datePublished" content="2021-05-11T10:47:11&#43;09:00" />
+<meta itemprop="dateModified" content="2021-05-11T10:47:11&#43;09:00" />
+<meta itemprop="wordCount" content="418">
+<meta itemprop="keywords" content="kotlin,Lamda," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kotlin Expert Syntax"/>
+<meta name="twitter:description" content="Kotlin 관련 조금더 심화된 사용법 정리"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -333,47 +339,203 @@ function tagCloud(where, min, max) {
 
     
     
-<main class="main" role="main">
-    <article class="article article-categories article-type-list" itemscope="">
-        <header class="article-header">
-            <h1 itemprop="name" class="hidden-xs">Kotlin</h1>
-            <p class="text-muted hidden-xs">Total 3 categories</p>
-            <nav role="navigation" id="nav-main" class="okayNav">
-                <ul>
-                    <li><a href="/categories/">All</a></li>
-                    <li><a href="https://ssadakk.github.io/categories/android/">android</a></li>
-                    <li><a href="https://ssadakk.github.io/categories/etc/">etc</a></li>
-                    <li><a href="https://ssadakk.github.io/categories/kotlin/">Kotlin</a></li>
-                </ul>
-            </nav>
-        </header>
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/post/kotlin/expert_syntax/"
+    >Kotlin Expert Syntax</a
+  >
+</h1>
+
+      <div class="article-meta">
         
-        <div class="article-body">
-            <div class="panel panel-default b-no">
-                <div class="panel-heading" role="tab">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse539a3a5859d24fb7b129e74d61f09ffa" aria-expanded="true">
-                            <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>Kotlin
-                        </a>
-                        <small class="text-muted">(Total2 articles)</small>
-                    </h4>
-                </div>
-                <div id="collapse539a3a5859d24fb7b129e74d61f09ffa" class="panel-collapse collapse in" role="tabpanel"
-                    aria-labelledby="heading539a3a5859d24fb7b129e74d61f09ffa">
-                    <div class="panel-body">
-                        <div class="collection"><a href="https://ssadakk.github.io/post/kotlin/expert_syntax/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2021-05-11 10:47:11 &#43;0900 KST" itemprop="datePublished" style="margin-right: 5px;">2021-05-11
-    </time>Kotlin Expert Syntax
-</a><a href="https://ssadakk.github.io/post/kotlin/basic_syntax/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2021-04-28 13:49:56 &#43;0900 KST" itemprop="datePublished" style="margin-right: 5px;">2021-04-28
-    </time>Kotlin syntax 정리 (Basic)
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://ssadakk.github.io/post/kotlin/expert_syntax/" class="article-date">
+  <time datetime="2021-05-11 10:47:11 &#43;0900 KST" itemprop="datePublished">2021-05-11</time>
 </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/kotlin/"> kotlin </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/kotlin/"> kotlin </a>
+    <a class="article-tag-link" href="/tags/lamda/"> Lamda </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/post/kotlin/expert_syntax/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 2 minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>Kotlin 관련 조금더 심화된 사용법 정리</p>
+<h3 id="lamda">Lamda</h3>
+<p>람다식 -&gt; Value 처럼 다룰 수 있는 익명 함수</p>
+<ul>
+<li>형식 : val lamdaName: Type = {argumentList -&gt; codebody}
+사용 예</li>
+</ul>
+<pre><code class="language-kotlin">val square: (Int) -&gt; (Int) = {number -&gt; number * number} //Int 받아서 제곱
+
+val nameAge = {name: String, age:Int -&gt;
+    &quot;my name is ${name}, I'm ${age}&quot;    
+}
+</code></pre>
+<p>람다의 리턴</p>
+<pre><code class="language-kotlin">val calculateGrade : (Int) -&gt; (String) = {
+    when (it) {
+        in 0..40 -&gt; &quot;fail&quot;
+    }
+} 
+</code></pre>
+<p>람다를 표현하는 방법</p>
+<pre><code class="language-kotlin">fun invokeLamda(lamda : (double) -&gt; Boolean) : Boolean {
+    return lamda(5.2343)
+}
+
+val lamda = {number: Double -&gt;
+    number == 4.3213    
+}
+
+println(invokeLamda(lamda)) // 결과는 false, lamda 를 인자로 받고 lamda 에 5.2343을 인자로 넘긴다
+println(invokeLamda({})) // invokeLamda 에서 lamda 호출되고 it 에 값이 5.2343으로 넘어온다, 값은 true
+
+invokeLamda() {it &gt; 3.22} // 이 두개가 똑같다
+invokeLamda {it &gt; 3.22} // function 의 마지막 파라미터가 람다인경우, 생략 가능
+</code></pre>
+<p>익명 내부 함수</p>
+<pre><code class="language-kotlin">button.setOnClickListener(object : View.OnClickListener {
+    override fun onClick(p0: View?) {
+    }
+})
+
+//kotlin interace 가 아닌 자바 인터페이스여야 한다
+// 그 인터페이스는 딱 하나의 메소드만 가져야 한다
+// 예를 들면 아래처럼 setOnClickListener 를 사용 가능
+button.setOnClickListener{ //it: View
+    // to do..
+}
+</code></pre>
+<h3 id="확장함수">확장함수</h3>
+<pre><code class="language-kotlin">val addEndString : String.() -&gt; String = {
+    this + &quot;END&quot;
+}
+
+val a = &quot;Start &quot;
+
+println(a.addEndString()) // 결과는 &quot;START END&quot;
+
+------------------------------------------------------
+
+fun extendString(name: String, age: Int) : String {
+    val introduceMyself : String.(Int) -&gt; String = {
+        &quot;I'm ${this} and ${it} years old&quot;
+    }
+
+    return name.introduceMyself(age)
+}
+
+println(extendString(&quot;Kim&quot;, 20)) // I'm Kim and 20 years old
+</code></pre>
+<h3 id="data-class">Data Class</h3>
+<pre><code class="language-kotlin">data class Ticket(val company: String, val name: String, var date: String, var seat : Int)
+
+val ticketA = Ticket(&quot;CompanyA&quot;, &quot;Kim&quot;, &quot;2020-12-12&quot;, 12)
+</code></pre>
+<p>Data class 의 선언 및 사용은 위와 같으며, toString(), hashCode(), equals(), copy() 메소드를 만들어줘 보일러플레이트 줄이는 데 유용하다.</p>
+<h3 id="companion-object">Companion object</h3>
+<pre><code class="language-kotlin">class Book private constructor(val id:Int, val name:String) { //다른곳에서는 객체를 생성하지 못함
+    companion object BookFactory { // private property, object 를 읽어올 수 있게 해준다
+        override fun getId(): Int {
+            return 444
+        }
+    
+        val myBook = &quot;name&quot;
+        fun create() = Book(0, myBook)
+    }
+}
+
+fun main(){
+    val book = Book.Companion.create() //객체 생성 된다 (Companion 생략 가능)
+    val bookId = Book.BookFactory.getId() // BookFactory 생략 가능
+}
+</code></pre>
+<h3 id="object-class">Object class</h3>
+<p>Object class 의 객체는 한번만 만들어진다(Singleton Pattern)<br>
+아래처럼 사용 가능</p>
+<pre><code class="language-kotlin">object CarFactory{
+    val cars = mutableListOf&lt;Car&gt;()
+    fun makeCar(hp: Int): Car {
+        val car = Car(hp)
+        cars.add(car)
+        return car
+    }
+
+}
+
+data class Car(val hp: Int) 
+
+fun main() {
+    val car = CarFactor.makeCar(10)
+    val car2 = CarFactor.makeCar(100)
+
+    println(car)
+    println(car2) //dataclass 이기 때문에 toString() 값이 출력
+    println(CarFactory.cars.size.toString()) // 2 출력
+}
+</code></pre>
+    </div>
+    <div class="article-footer">
+
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://ssadakk.github.io/post/kotlin/basic_syntax/" title="Kotlin syntax 정리 (Basic)"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
         </div>
-    </article>
+    </div>
+</nav>
+
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/ssadakk" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -439,6 +601,19 @@ function tagCloud(where, min, max) {
         
         hasInnerContainers: true,
     });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/ssadakk.github.io\/post\/kotlin\/expert_syntax\/';
+        this.page.identifier = 'myblog-yamhhn4gzh';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'myblog-yamhhn4gzh' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 
 <script type="application/javascript">
