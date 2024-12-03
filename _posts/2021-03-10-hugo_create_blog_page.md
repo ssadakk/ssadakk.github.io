@@ -58,7 +58,7 @@ Category: etc
 
 - hugo new filename.md 로 글을 생성할수 있음.
 
-    ![5.png](5.png)
+    ![5.png](assets/images/2021-03-10-hugo_create_blog_page/5.png)
 
 - hugo server -D (draft 파일도 포함해 보여주겠다는 뜻)
 - [https://localhost:1313](https://localhost:1313) 으로 접속하면 로컬 webserver 이용해 확인할 수 있음
@@ -68,7 +68,7 @@ Category: etc
 - 배포하려면, 2개의 Github repo 필요함.
 - 전체 파일이 들어갈 것은 마음대로 생성, 실제 보일 페이지가 저장되는 곳은 레포 이름을 다음과 같이 설정. "본인아이디".github.io 아래처럼.
 
-    ![6.png](6.png)
+    ![6.png](assets/images/2021-03-10-hugo_create_blog_page/6.png)
 
 그다음 아래순서로 진행
 
