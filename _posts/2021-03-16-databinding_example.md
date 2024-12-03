@@ -16,7 +16,7 @@ Recycler view 에도 붙여보려고 했는데, 따로 추가하여 작성할 �
 [https://github.com/ssadakk/SampleDataBinding](https://github.com/ssadakk/SampleDataBinding) 에서 확인 가능
 
 ## 전체 화면 개요
-![1.png](1.png)   
+![1.png](assets/images/2021-03-16-databinding_example/1.png)   
 진짜 간단하다. 버튼을 누르면 viewmodel 의 카운터를 증가시킬 것이고 이것을 바로 textview 와  progress bar 에 적용시키도록 만들것. 대충만 이해하기 위한 것이므로 이정도면 충분.
 
 ## Layout 작성

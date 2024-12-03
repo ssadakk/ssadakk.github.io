@@ -67,7 +67,7 @@ ViewModel 객체는 LiveData와 같은 LifecycleObservers 가 포함 될 수 있
 ViewModel 객체 범위는 ViewModelProvider에 전달되는 Lifecycle로 지정된다.   
 ViewModel은 Activity Lifecycle이 끝날때 까지, Fragment 분리될 때 까지 메모리에 남아있게 된다. 
 
-![viewmodel](1.png)
+![viewmodel](assets/images/2021-04-01-view_model/1.png)
 
 일반적으로 onCreate() 메서드를 처음 호출할 때 ViewModel 을 생성. 화면 기기 회전될 때 onCreate() 여러번 호출 될 수 있고, 처음 viewmodel 생성되어서부터 액티비티 끝날 때 까지 viewmodel 은 존재하게 됨.   
   
@@ -124,10 +124,10 @@ class DetailFragment : Fragment() {
 CursorLoader 와 같은 로더 클래스는 UI 데이터와 DB 간의 동기화를 유지하는데 자주 사용. ViewModel을 몇 가지 클래스와 함께 사용하여 로더를 대체할 수 있다. ViewModel을 사용하면 UI controller가 데이터 로드 작업에서 분리되어 강력한 참조가 적어진다.  
   
 일반적인 로더 사용 방법중 하나로, 앱이 CursorLoader를 사용하고 DB 내용을 Observe 할 수 있다. DB 값이 변경되면 데이터를 새로고치고 UI 업데이트를 진행한다. 
-![2.png](2.png)
+![2.png](assets/images/2021-04-01-view_model/2.png)
   
 ViewModel을 이용하게 되면 Room 과 LiveData 를 이용하여 로더를 대체한다. ViewModel은 기기 서렂ㅇ이 변경되어도 데이터가 유지되도록 한다. DB 가 변경되면 Room에서 LiveData에 변경을 노티하고 노티를 받은 LiveData는 수정된 데이터로 UI 업데이트
-![3.png](2.png)
+![3.png](assets/images/2021-04-01-view_model/2.png)
 
 
 
