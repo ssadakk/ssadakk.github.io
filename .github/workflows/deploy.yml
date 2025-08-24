@@ -32,6 +32,8 @@ jobs:
           # path: . # The root location of your Astro project (optional)
           node-version: 22 # Defaults to 22 (optional)
           package-manager: npm@latest # Use npm instead of pnpm
+        env:
+          PUBLIC_GOOGLE_ADSENSE_ID: ca-pub-3651717576639643
 
   deploy:
     needs: build
