@@ -131,6 +131,15 @@ const structuredData = {
     <ClientRouter />
 
     <script is:inline src="/toggle-theme.js"></script>
+    
+    <!-- Google AdSense -->
+    {import.meta.env.PUBLIC_GOOGLE_ADSENSE_ID && (
+      <script 
+        async 
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${import.meta.env.PUBLIC_GOOGLE_ADSENSE_ID}`}
+        crossorigin="anonymous"
+      ></script>
+    )}
   </head>
   <body>
     <slot />

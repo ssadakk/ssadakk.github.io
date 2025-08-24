@@ -9,6 +9,7 @@ import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
+import GoogleAdsense from "@/components/GoogleAdsense.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
@@ -110,12 +111,31 @@ const nextPost =
       >
       <EditPost {hideEditPost} {post} class="max-sm:hidden" />
     </div>
+    
+    <!-- Google AdSense - 포스트 상단 광고 -->
+    {import.meta.env.PUBLIC_GOOGLE_ADSENSE_ID && (
+      <GoogleAdsense 
+        slot="1234567890" 
+        format="auto"
+        className="post-top-ad"
+      />
+    )}
+    
     <article
       id="article"
       class="app-prose mx-auto mt-8 max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
     >
       <Content />
     </article>
+    
+    <!-- Google AdSense - 포스트 하단 광고 -->
+    {import.meta.env.PUBLIC_GOOGLE_ADSENSE_ID && (
+      <GoogleAdsense 
+        slot="0987654321" 
+        format="auto"
+        className="post-bottom-ad"
+      />
+    )}
 
     <hr class="my-8 border-dashed" />
 
